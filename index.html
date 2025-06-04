@@ -1,4 +1,4 @@
-<!DOCTYPE html>Add commentMore actions
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -583,6 +583,12 @@
           <p class="mt-2">Email: <a href="mailto:aanjum@qau.edu.pk" class="text-teal-600 hover:underline">aanjum@qau.edu.pk</a></p>
         </div>
       </section>
+
+      <button onclick="goHome()" class="mt-4 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors duration-300">
+        Back to Home
+    </button>
+
+
     </main>
 
     <footer class="max-w-4xl mx-auto p-8 text-center text-sm text-gray-500 mt-12">
@@ -617,6 +623,11 @@
     
         window.scrollTo(0, 0);
       }
+      function goHome() {
+        document.getElementById('resume-content').classList.add('hidden');
+        document.getElementById('landing').classList.remove('hidden');
+        window.scrollTo(0, 0);
+    }
     </script>
     </body>
     </html>
