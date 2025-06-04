@@ -6,6 +6,7 @@
   <title>Fawaz Ahmad | Resume</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -43,6 +44,23 @@
       }
       .link-hover {
         @apply transition-colors duration-200 hover:text-teal-600;
+      }
+      .print-hidden {
+        @apply hidden print:block;
+      }
+    }
+    @media print {
+      body {
+        zoom: 0.9;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print\:hidden {
+        display: none !important;
+      }
+      .print\:block {
+        display: block !important;
       }
     }
   </style>
@@ -269,153 +287,152 @@
       </section>
 
       <!-- Projects -->
-      <!-- Projects -->
-<section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-  <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-green-600 section-divider">
-    <i class="fa fa-project-diagram bg-green-100 p-2 rounded-full text-green-600"></i> Projects
-  </h2>
-  <div class="space-y-8">
-    <!-- Real Time Suspicious Activity Detection -->
-    <article class="group">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Real Time Suspicious Activity Detection <span class="text-sm font-normal italic">(Final Year Project)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            A Python-based Suspicious Activity Detection System that uses YOLO pre-trained models to detect harmful behaviors (Gun, Fighting etc.) in real-time video feeds and uploaded footage. It sends alerts, logs incidents, and supports multiple camera feeds for enhanced surveillance.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Computer Vision</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">YOLO</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">OpenCV</span>
-          </div>
-          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
-        </div>
-      </div>
-    </article>
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-green-600 section-divider">
+          <i class="fa fa-project-diagram bg-green-100 p-2 rounded-full text-green-600"></i> Projects
+        </h2>
+        <div class="space-y-8">
+          <!-- Real Time Suspicious Activity Detection -->
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Real Time Suspicious Activity Detection <span class="text-sm font-normal italic">(Final Year Project)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  A Python-based Suspicious Activity Detection System that uses YOLO pre-trained models to detect harmful behaviors (Gun, Fighting etc.) in real-time video feeds and uploaded footage. It sends alerts, logs incidents, and supports multiple camera feeds for enhanced surveillance.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Computer Vision</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">YOLO</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">OpenCV</span>
+                </div>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
 
-    <!-- File Management System -->
-    <article class="group">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">File Management System <span class="text-sm font-normal italic">(Semester Project)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            Developed a desktop application using JavaFX and Scene Builder for the front-end as part of Object-Oriented Programming coursework. Integrated a back-end database using XAMPP and SQL to ensure efficient data storage and management.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Java</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaFX</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">XAMPP</span>
-          </div>
-          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
-        </div>
-      </div>
-    </article>
+          <!-- File Management System -->
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">File Management System <span class="text-sm font-normal italic">(Semester Project)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Developed a desktop application using JavaFX and Scene Builder for the front-end as part of Object-Oriented Programming coursework. Integrated a back-end database using XAMPP and SQL to ensure efficient data storage and management.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Java</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaFX</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">XAMPP</span>
+                </div>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
 
-    <!-- IIT Department Web Portal -->
-    <article class="group">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">IIT Department Web Portal <span class="text-sm font-normal italic">(Semester Project)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            Developed a comprehensive departmental website for the Institute of Information Technology as a semester project using HTML, CSS, JavaScript, and Bootstrap. Created five dynamic pages with service and contact details, and integrated a back-end database using XAMPP and SQL for efficient data management.
-          </p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">HTML/CSS</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaScript</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Bootstrap</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
-          </div>
-          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
-        </div>
-      </div>
-    </article>
+          <!-- IIT Department Web Portal -->
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">IIT Department Web Portal <span class="text-sm font-normal italic">(Semester Project)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Developed a comprehensive departmental website for the Institute of Information Technology as a semester project using HTML, CSS, JavaScript, and Bootstrap. Created five dynamic pages with service and contact details, and integrated a back-end database using XAMPP and SQL for efficient data management.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">HTML/CSS</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaScript</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Bootstrap</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
+                </div>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
 
-    <!-- Grocery Store Management System (Detailed Only) -->
-    <article id="grocery-project" class="group detailed-only">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Grocery Store Management System <span class="text-sm font-normal italic">(C++ Console Application)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            Developed a console-based Grocery Store Management System in C++ with comprehensive inventory management capabilities. Implemented core functionalities including:
-          </p>
-          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-            <li>Add, delete, and update item quantities in real-time</li>
-            <li>Calculate total bills with tax and discount calculations</li>
-            <li>Generate itemized receipts with purchase details</li>
-            <li>Apply various discount strategies based on purchase volume</li>
-            <li>Daily sales reporting and inventory tracking</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">C++</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Object-Oriented Programming</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Console Application</span>
-          </div>
-          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
-        </div>
-      </div>
-    </article>
+          <!-- Grocery Store Management System (Detailed Only) -->
+          <article id="grocery-project" class="group detailed-only">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Grocery Store Management System <span class="text-sm font-normal italic">(C++ Console Application)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Developed a console-based Grocery Store Management System in C++ with comprehensive inventory management capabilities. Implemented core functionalities including:
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                  <li>Add, delete, and update item quantities in real-time</li>
+                  <li>Calculate total bills with tax and discount calculations</li>
+                  <li>Generate itemized receipts with purchase details</li>
+                  <li>Apply various discount strategies based on purchase volume</li>
+                  <li>Daily sales reporting and inventory tracking</li>
+                </ul>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">C++</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Object-Oriented Programming</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Console Application</span>
+                </div>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
 
-    <!-- Transportation Analysis (Detailed Only) -->
-    <article id="transport-project" class="group detailed-only">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Transportation Sector Analysis: Pakistan's Rent-a-Car Industry <span class="text-sm font-normal italic">(Research Project)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            Conducted comprehensive academic research analyzing global transportation sectors with focus on Pakistan's Rent-a-Car industry:
-          </p>
-          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-            <li>Economic impact assessment of transportation sector</li>
-            <li>Primary research through local business surveys</li>
-            <li>Demand-supply analysis of car rental services</li>
-            <li>Competitive landscape mapping</li>
-            <li>Data visualization of market trends and projections</li>
-            <li>Strategic recommendations for industry stakeholders</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Research</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Analysis</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Market Research</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Visualization</span>
-          </div>
-          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
-        </div>
-      </div>
-    </article>
+          <!-- Transportation Analysis (Detailed Only) -->
+          <article id="transport-project" class="group detailed-only">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Transportation Sector Analysis: Pakistan's Rent-a-Car Industry <span class="text-sm font-normal italic">(Research Project)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Conducted comprehensive academic research analyzing global transportation sectors with focus on Pakistan's Rent-a-Car industry:
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                  <li>Economic impact assessment of transportation sector</li>
+                  <li>Primary research through local business surveys</li>
+                  <li>Demand-supply analysis of car rental services</li>
+                  <li>Competitive landscape mapping</li>
+                  <li>Data visualization of market trends and projections</li>
+                  <li>Strategic recommendations for industry stakeholders</li>
+                </ul>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Research</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Analysis</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Market Research</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Visualization</span>
+                </div>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
 
-    <!-- Disease Prediction System (Detailed Only) -->
-    <article id="disease-project" class="group detailed-only">
-      <div class="flex gap-4">
-        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-        <div>
-          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Disease Prediction System <span class="text-sm font-normal italic">(AI Health Application)</span></h3>
-          <p class="text-gray-700 leading-relaxed">
-            Built a Disease Prediction System using machine learning that analyzes patient symptoms to predict potential illnesses:
-          </p>
-          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
-            <li>User-friendly interface for symptom input</li>
-            <li>Machine learning model trained on medical datasets</li>
-            <li>Probability-based disease prediction</li>
-            <li>Health recommendations based on prediction results</li>
-            <li>Common illness detection (flu, allergies, infections)</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Machine Learning</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Healthcare AI</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Science</span>
-          </div>
+          <!-- Disease Prediction System (Detailed Only) -->
+          <article id="disease-project" class="group detailed-only">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Disease Prediction System <span class="text-sm font-normal italic">(AI Health Application)</span></h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Built a Disease Prediction System using machine learning that analyzes patient symptoms to predict potential illnesses:
+                </p>
+                <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                  <li>User-friendly interface for symptom input</li>
+                  <li>Machine learning model trained on medical datasets</li>
+                  <li>Probability-based disease prediction</li>
+                  <li>Health recommendations based on prediction results</li>
+                  <li>Common illness detection (flu, allergies, infections)</li>
+                </ul>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Machine Learning</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Healthcare AI</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Science</span>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </article>
-  </div>
-</section>
+      </section>
 
       <!-- Key Achievements -->
       <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -585,38 +602,69 @@
       </section>
     </main>
 
-    <footer class="max-w-4xl mx-auto p-8 text-center text-sm text-gray-500 mt-12">
-        <p>&copy; 2025 Fawaz Ahmad. All rights reserved.</p>
-        </footer>
-    
-      </div>
-    
-      <script>
-      function showResume(type) {
-        document.getElementById('landing').classList.add('hidden');
-        const resumeContent = document.getElementById('resume-content');
-        resumeContent.classList.remove('hidden');
-    
-        // Toggle reference section
-        const referenceSection = document.getElementById('reference-section');
+    <!-- Download Button Container -->
+    <div id="download-container" class="no-print max-w-4xl mx-auto px-8 pb-8 text-center mt-8">
+
+      <button id="back-btn" class="mt-4 px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Home
+      </button>
+    </div>
+
+    <footer class="no-print max-w-4xl mx-auto p-8 text-center text-sm text-gray-500 mt-12">
+      <p>&copy; 2025 Fawaz Ahmad. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    let currentResumeType = ''; // Tracks which resume is currently displayed
+
+    function showResume(type) {
+      currentResumeType = type;
+      document.getElementById('landing').classList.add('hidden');
+      const resumeContent = document.getElementById('resume-content');
+      resumeContent.classList.remove('hidden');
+
+      // Update download button text
+      document.getElementById('resume-type-text').textContent = 
+        type === 'short' ? 'Short Resume' : 'Detailed CV';
+
+      // Toggle reference section
+      const referenceSection = document.getElementById('reference-section');
+      if (referenceSection) {
         if (type === 'short') {
-          if (referenceSection) referenceSection.classList.add('hidden');
+          referenceSection.classList.add('hidden');
         } else {
-          if (referenceSection) referenceSection.classList.remove('hidden');
+          referenceSection.classList.remove('hidden');
         }
-    
-        // Toggle detailed projects
-        const detailedProjects = document.querySelectorAll('.detailed-only');
-        detailedProjects.forEach(project => {
-          if (type === 'short') {
-            project.classList.add('hidden');
-          } else {
-            project.classList.remove('hidden');
-          }
-        });
-    
-        window.scrollTo(0, 0);
       }
-    </script>
-    </body>
-    </html>
+
+      // Toggle detailed projects
+      const detailedProjects = document.querySelectorAll('.detailed-only');
+      detailedProjects.forEach(project => {
+        if (type === 'short') {
+          project.classList.add('hidden');
+        } else {
+          project.classList.remove('hidden');
+        }
+      });
+
+      window.scrollTo(0, 0);
+    }
+
+    // Back to home function
+    function backToHome() {
+      document.getElementById('resume-content').classList.add('hidden');
+      document.getElementById('landing').classList.remove('hidden');
+    }
+
+    // Download functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const backBtn = document.getElementById('back-btn');
+      
+      // Back button event listener
+      backBtn.addEventListener('click', backToHome);
+    });
+  </script>
+</body>
+</html>
