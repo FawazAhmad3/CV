@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fawaz Ahmad | Resume</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'fade-in': 'fadeIn 1s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'scale-up': 'scaleUp 0.5s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            scaleUp: {
+              '0%': { transform: 'scale(0.95)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .section-divider {
+        @apply relative before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-16 before:bg-gradient-to-r before:from-teal-500 before:to-blue-500 before:rounded-full;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+      }
+      .link-hover {
+        @apply transition-colors duration-200 hover:text-teal-600;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 font-sans leading-relaxed">
+
+  <!-- Landing Page -->
+  <div id="landing" class="min-h-screen flex flex-col justify-center items-center p-8 text-center animate-fade-in">
+    <div class="max-w-2xl mx-auto space-y-12">
+      <div class="space-y-6 animate-slide-up">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-wide bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
+          FAWAZ AHMAD
+        </h1>
+        <p class="text-xl text-gray-600">BSIT Final Year Student | Vice President at AICP QAU</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-scale-up">
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer" 
+             onclick="showResume('short')">
+          <div class="flex flex-col items-center justify-center h-full space-y-4">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center text-teal-600">
+              <i class="fa-solid fa-file-lines text-2xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-teal-800">Short Resume</h2>
+            <p class="text-gray-600">Concise overview of my qualifications and experience</p>
+            <button class="mt-4 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors duration-300">
+              View Short Resume
+            </button>
+          </div>
+        </div>
+        
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer" 
+             onclick="showResume('detailed')">
+          <div class="flex flex-col items-center justify-center h-full space-y-4">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+              <i class="fa-solid fa-file-circle-check text-2xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-blue-800">Detailed CV</h2>
+            <p class="text-gray-600">Complete CV including all sections and references</p>
+            <button class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+              View Detailed CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Content (Hidden Initially) -->
+  <div id="resume-content" class="hidden">
+    <!-- Header -->
+    <header class="p-8 text-gray-900">
+      <div class="max-w-4xl mx-auto mt-16 mb-16 space-y-6 animate-fade-in">
+        <!-- Top Section -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-16 animate-slide-up">
+          <h1 class="text-4xl md:text-5xl font-bold tracking-wide bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
+            FAWAZ AHMAD
+          </h1>
+          <div class="text-right text-sm opacity-80 space-y-1 bg-white/50 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+            <p class="font-medium">Vice President at AICP QAU</p>
+            <p>BSIT Final Year Student</p>
+            <p>Quaid-i-Azam University, Islamabad</p>
+          </div>
+        </div>
+    
+        <!-- Divider with gradient -->
+        <div class="h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent my-8"></div>
+    
+        <!-- Contact Info -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-16 text-sm animate-slide-up">
+          <div class="flex flex-col gap-3">
+            <a href="mailto:fawazahmad913@gmail.com" class="link-hover text-blue-600 hover:underline flex items-center gap-2 transition-all duration-300 hover:translate-x-1">
+                <i class="fa-solid fa-envelope w-5 text-center"></i> fawazahmad913@gmail.com
+            </a>
+            <a href="tel:+923110540839" class="link-hover text-blue-600 hover:underline flex items-center gap-2 transition-all duration-300 hover:translate-x-1">
+                <i class="fa-solid fa-phone w-5 text-center"></i> +92-311-0540839
+            </a>
+          </div>
+          <div class="flex flex-col gap-3 sm:items-end">
+            <a href="https://www.linkedin.com/in/fawaz-ahmad7" target="_blank" rel="noopener" class="link-hover text-blue-600 hover:underline flex items-center gap-2 transition-all duration-300 hover:translate-x-1">
+                <i class="fa-brands fa-linkedin w-5 text-center"></i> linkedin.com/in/fawaz-ahmad7
+            </a>
+            <p class="flex items-center gap-2 text-blue-600">
+                <i class="fa-solid fa-location-dot text-blue-600 w-5 text-center"></i> Rawalpindi, Pakistan
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main class="max-w-4xl mx-auto p-8 space-y-12">
+
+      <!-- Profile Summary -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-4 flex items-center gap-2 text-teal-600 section-divider">
+          <i class="fa-solid fa-user bg-teal-100 p-2 rounded-full text-teal-600"></i> Profile Summary
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          I'm a BSIT final year student at Quaid-i-Azam University, Islamabad, currently serving as Vice President at
+          AICP QAU (Artificial Intelligence Community of Pakistan). I've completed internships in AI Development and
+          Machine Learning at organizations like Eve Bytes and NCP. Skilled in Python, Java, C++, and web technologies, with projects involving real-time surveillance systems and database-driven applications. I actively participate in workshops and technical events to enhance my knowledge and contribute to the tech community.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-orange-600 section-divider">
+          <i class="fa-solid fa-briefcase bg-orange-100 p-2 rounded-full text-orange-600"></i> Experience
+        </h2>
+        <div class="space-y-8">
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-orange-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-orange-800 group-hover:text-orange-600 transition-colors duration-300">Web Engineering Intern</h3>
+                <p class="text-sm text-gray-600">Digital Tent Studio, Islamabad, Pakistan</p>
+                <p class="text-xs text-gray-400 mt-1">03/2025 - Present</p>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-orange-100 to-transparent group-hover:via-orange-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-orange-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-orange-800 group-hover:text-orange-600 transition-colors duration-300">Machine Learning & Deep Learning Intern</h3>
+                <p class="text-sm text-gray-600">National Center for Physics (AITeC), Islamabad, Pakistan</p>
+                <p class="text-xs text-gray-400 mt-1">08/2024 - 09/2024</p>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-orange-100 to-transparent group-hover:via-orange-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-orange-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-orange-800 group-hover:text-orange-600 transition-colors duration-300">AI Development Intern</h3>
+                <p class="text-sm text-gray-600">Eve Bytes (Remote)</p>
+                <p class="text-xs text-gray-400 mt-1">04/2024 - 05/2024</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-blue-600 section-divider">
+          <i class="fa-solid fa-graduation-cap bg-blue-100 p-2 rounded-full text-blue-600"></i> Education
+        </h2>
+        <div class="space-y-8">
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">Bachelor of Science in Information Technology (BSIT)</h3>
+                <p class="text-sm text-gray-600">Quaid-i-Azam University, Islamabad</p>
+                <p class="text-xs text-gray-400 mt-1">09/2021 - Present | CGPA: 3.2 / 4.0</p>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-blue-100 to-transparent group-hover:via-blue-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">Pre-Engineering</h3>
+                <p class="text-sm text-gray-600">Astron College of Science and Commerce, Rawalpindi</p>
+                <p class="text-xs text-gray-400 mt-1">06/2019 - 05/2021</p>
+                <div class="mt-2 h-px bg-gradient-to-r from-transparent via-blue-100 to-transparent group-hover:via-blue-200 transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+          <article class="group">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 mt-2 bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">Matric Computer Science</h3>
+                <p class="text-sm text-gray-600">Grammar Public School, Rawalpindi</p>
+                <p class="text-xs text-gray-400 mt-1">03/2017 - 05/2019</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-teal-600 section-divider">
+          <i class="fa fa-code bg-teal-100 p-2 rounded-full text-teal-600"></i> Skills
+        </h2>
+        <div class="flex flex-wrap gap-8">
+          <!-- Soft Skills -->
+          <div class="space-y-4 flex-1 min-w-[200px]">
+            <h4 class="font-semibold text-teal-900 flex items-center gap-2">
+              <i class="fa-solid fa-people-group text-teal-600"></i> Soft Skills
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Leadership</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Communication</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Management</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Problem Solving</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Project Management</span>
+            </div>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="space-y-4 flex-1 min-w-[200px]">
+            <h4 class="font-semibold text-teal-900 flex items-center gap-2">
+              <i class="fa-solid fa-laptop-code text-teal-600"></i> Technical Skills
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Python</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">C++</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Java</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Software Development</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">Machine Learning</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">HTML/CSS</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">JavaScript</span>
+              <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors duration-200">SQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <!-- Projects -->
+<section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+  <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-green-600 section-divider">
+    <i class="fa fa-project-diagram bg-green-100 p-2 rounded-full text-green-600"></i> Projects
+  </h2>
+  <div class="space-y-8">
+    <!-- Real Time Suspicious Activity Detection -->
+    <article class="group">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Real Time Suspicious Activity Detection <span class="text-sm font-normal italic">(Final Year Project)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            A Python-based Suspicious Activity Detection System that uses YOLO pre-trained models to detect harmful behaviors (Gun, Fighting etc.) in real-time video feeds and uploaded footage. It sends alerts, logs incidents, and supports multiple camera feeds for enhanced surveillance.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Computer Vision</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">YOLO</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">OpenCV</span>
+          </div>
+          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- File Management System -->
+    <article class="group">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">File Management System <span class="text-sm font-normal italic">(Semester Project)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            Developed a desktop application using JavaFX and Scene Builder for the front-end as part of Object-Oriented Programming coursework. Integrated a back-end database using XAMPP and SQL to ensure efficient data storage and management.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Java</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaFX</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">XAMPP</span>
+          </div>
+          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- IIT Department Web Portal -->
+    <article class="group">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">IIT Department Web Portal <span class="text-sm font-normal italic">(Semester Project)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            Developed a comprehensive departmental website for the Institute of Information Technology as a semester project using HTML, CSS, JavaScript, and Bootstrap. Created five dynamic pages with service and contact details, and integrated a back-end database using XAMPP and SQL for efficient data management.
+          </p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">HTML/CSS</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">JavaScript</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Bootstrap</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">SQL</span>
+          </div>
+          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Grocery Store Management System (Detailed Only) -->
+    <article id="grocery-project" class="group detailed-only">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Grocery Store Management System <span class="text-sm font-normal italic">(C++ Console Application)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            Developed a console-based Grocery Store Management System in C++ with comprehensive inventory management capabilities. Implemented core functionalities including:
+          </p>
+          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+            <li>Add, delete, and update item quantities in real-time</li>
+            <li>Calculate total bills with tax and discount calculations</li>
+            <li>Generate itemized receipts with purchase details</li>
+            <li>Apply various discount strategies based on purchase volume</li>
+            <li>Daily sales reporting and inventory tracking</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">C++</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Object-Oriented Programming</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Console Application</span>
+          </div>
+          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Transportation Analysis (Detailed Only) -->
+    <article id="transport-project" class="group detailed-only">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Transportation Sector Analysis: Pakistan's Rent-a-Car Industry <span class="text-sm font-normal italic">(Research Project)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            Conducted comprehensive academic research analyzing global transportation sectors with focus on Pakistan's Rent-a-Car industry:
+          </p>
+          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+            <li>Economic impact assessment of transportation sector</li>
+            <li>Primary research through local business surveys</li>
+            <li>Demand-supply analysis of car rental services</li>
+            <li>Competitive landscape mapping</li>
+            <li>Data visualization of market trends and projections</li>
+            <li>Strategic recommendations for industry stakeholders</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Research</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Analysis</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Market Research</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Visualization</span>
+          </div>
+          <div class="mt-2 h-px bg-gradient-to-r from-transparent via-green-100 to-transparent group-hover:via-green-200 transition-all duration-500"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Disease Prediction System (Detailed Only) -->
+    <article id="disease-project" class="group detailed-only">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-3 h-3 mt-2 bg-green-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+        <div>
+          <h3 class="text-xl font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Disease Prediction System <span class="text-sm font-normal italic">(AI Health Application)</span></h3>
+          <p class="text-gray-700 leading-relaxed">
+            Built a Disease Prediction System using machine learning that analyzes patient symptoms to predict potential illnesses:
+          </p>
+          <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+            <li>User-friendly interface for symptom input</li>
+            <li>Machine learning model trained on medical datasets</li>
+            <li>Probability-based disease prediction</li>
+            <li>Health recommendations based on prediction results</li>
+            <li>Common illness detection (flu, allergies, infections)</li>
+          </ul>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Machine Learning</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Python</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Healthcare AI</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Data Science</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+      <!-- Key Achievements -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-bold pb-2 mb-8 flex items-center gap-3 text-purple-600 section-divider">
+          <i class="fa fa-trophy bg-purple-100 p-2 rounded-full text-purple-600 text-xl"></i> Key Achievements
+        </h2>
+        <div class="space-y-8">
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 w-10 h-10 text-purple-600 flex items-center justify-center font-bold text-3xl mt-1 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors duration-300">🏆</div>
+            <div>
+              <h3 class="text-lg font-semibold text-purple-800 group-hover:text-purple-600 transition-colors duration-300">Certificate of Appreciation</h3>
+              <p class="text-gray-700 italic mt-1 max-w-xl">
+                Actively participated in organizing the event <br><span class="font-semibold">"International Workshop on Microsoft Technologies"</span> <br>under the Pak-Finland Capacity Building Initiative (Phase-1).
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 w-10 h-10 text-purple-600 flex items-center justify-center font-bold text-3xl mt-1 bg-purple-100 rounded-full group-hover:bg-purple-200 transition-colors duration-300">🏆</div>
+            <div>
+              <h3 class="text-lg font-semibold text-purple-800 group-hover:text-purple-600 transition-colors duration-300">Certificate of Appreciation</h3>
+              <p class="text-gray-700 italic mt-1 max-w-xl">
+                Actively participated in organizing the event <br><span class="font-semibold">"Open house for final year students"</span> <br>at Institute of Information Technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Certifications -->
+      <section class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-8 flex items-center gap-2 text-indigo-600 section-divider">
+          <i class="fa-solid fa-certificate bg-indigo-100 p-2 rounded-full text-indigo-600"></i> Certifications
+        </h2>
+      
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <!-- Workshops & Online Courses -->
+          <div>
+            <h3 class="font-semibold text-indigo-800 mb-4 border-b border-indigo-200 pb-2 flex items-center gap-2">
+              <i class="fa-solid fa-chalkboard-user text-indigo-600"></i> Workshops & Online Courses
+            </h3>
+            <ul class="space-y-6">
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">International Workshop on Microsoft Technologies</h4>
+                    <p class="text-sm text-gray-600">Pak-Finland Capacity Building Initiative (Phase-1) at Quaid-i-Azam University, Islamabad</p>
+                    <p class="text-xs text-indigo-500 mt-1">01/2025</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Introduction to Microsoft Excel</h4>
+                    <p class="text-sm text-gray-600">Coursera</p>
+                    <p class="text-xs text-indigo-500 mt-1">01/2023</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Getting Started with Microsoft PowerPoint</h4>
+                    <p class="text-sm text-gray-600">Coursera</p>
+                    <p class="text-xs text-indigo-500 mt-1">01/2023</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Getting Started with Microsoft Word</h4>
+                    <p class="text-sm text-gray-600">Coursera</p>
+                    <p class="text-xs text-indigo-500 mt-1">01/2023</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Learn Tailwind CSS</h4>
+                    <p class="text-sm text-gray-600">Scrimba</p>
+                    <p class="text-xs text-indigo-500 mt-1">02/2025</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      
+          <!-- Technical Certifications -->
+          <div>
+            <h3 class="font-semibold text-indigo-800 mb-4 border-b border-indigo-200 pb-2 flex items-center gap-2">
+              <i class="fa-solid fa-microchip text-indigo-600"></i> Technical Certifications
+            </h3>
+            <ul class="space-y-6">
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">CCNA: Introduction to Networks</h4>
+                    <p class="text-sm text-gray-600">CISCO</p>
+                    <p class="text-xs text-indigo-500 mt-1">05/2025</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Computer Networking</h4>
+                    <p class="text-sm text-gray-600">Ezxprt</p>
+                    <p class="text-xs text-indigo-500 mt-1">05/2025</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">CISCO Packet Tracer</h4>
+                    <p class="text-sm text-gray-600">Ezxprt</p>
+                    <p class="text-xs text-indigo-500 mt-1">05/2025</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">VMware Workstation</h4>
+                    <p class="text-sm text-gray-600">Ezxprt</p>
+                    <p class="text-xs text-indigo-500 mt-1">05/2025</p>
+                  </div>
+                </div>
+              </li>
+              <li class="group">
+                <div class="flex gap-3">
+                  <div class="flex-shrink-0 w-2 h-2 mt-3 bg-indigo-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                  <div>
+                    <h4 class="font-semibold text-lg text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Introduction to Cybersecurity Tools & Cyber Attacks</h4>
+                    <p class="text-sm text-gray-600">Credly by Pearson</p>
+                    <p class="text-xs text-indigo-500 mt-1">03/2023</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reference (Only shown in detailed CV) -->
+      <section id="reference-section" class="card-hover bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <h2 class="text-2xl font-semibold pb-2 mb-6 flex items-center gap-2 text-orange-600 section-divider">
+          <i class="fa-solid fa-address-card bg-orange-100 p-2 rounded-full text-orange-600"></i> Reference
+        </h2>
+        <div class="space-y-1 text-sm bg-orange-50 p-4 rounded-lg">
+          <p class="font-semibold text-orange-800">Dr. Adeel Anjum</p>
+          <p class="text-gray-600">Professor / Director</p>
+          <p class="text-gray-600">Institute of Information Technology, Quaid-i-Azam University, Islamabad, Pakistan</p>
+          <p class="mt-2">Email: <a href="mailto:aanjum@qau.edu.pk" class="text-teal-600 hover:underline">aanjum@qau.edu.pk</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="max-w-4xl mx-auto p-8 text-center text-sm text-gray-500 mt-12">
+        <p>&copy; 2025 Fawaz Ahmad. All rights reserved.</p>
+        </footer>
+    
+      </div>
+    
+      <script>
+      function showResume(type) {
+        document.getElementById('landing').classList.add('hidden');
+        const resumeContent = document.getElementById('resume-content');
+        resumeContent.classList.remove('hidden');
+    
+        // Toggle reference section
+        const referenceSection = document.getElementById('reference-section');
+        if (type === 'short') {
+          if (referenceSection) referenceSection.classList.add('hidden');
+        } else {
+          if (referenceSection) referenceSection.classList.remove('hidden');
+        }
+    
+        // Toggle detailed projects
+        const detailedProjects = document.querySelectorAll('.detailed-only');
+        detailedProjects.forEach(project => {
+          if (type === 'short') {
+            project.classList.add('hidden');
+          } else {
+            project.classList.remove('hidden');
+          }
+        });
+    
+        window.scrollTo(0, 0);
+      }
+    </script>
+    </body>
+    </html>
