@@ -475,6 +475,7 @@ header {
   font-weight: 600;
   color: var(--gray);
   cursor: pointer;
+  position: relative;
   transition: var(--transition);
   border-radius: 12px;
   font-size: 1rem;
@@ -521,9 +522,6 @@ header {
   display: block;
 }
 
-/* REMOVED TIMELINE STRUCTURE SINCE YOU'RE NOT USING IT */
-/* .timeline, .timeline:before, .timeline-item, .timeline-icon, etc. */
-
 .timeline-date {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -535,7 +533,7 @@ header {
   margin-bottom: 16px;
 }
 
-/* Projects Section */
+/* Projects Section - FIXED FOR MOBILE */
 .projects {
   background: var(--light);
 }
@@ -574,7 +572,8 @@ header {
   transition: var(--transition);
   border: 1px solid var(--light-gray);
   position: relative;
-  height: 480px;
+  height: auto; /* Changed from fixed height to auto */
+  min-height: 480px; /* Minimum height for desktop */
   display: flex;
   flex-direction: column;
 }
@@ -622,29 +621,11 @@ header {
   color: var(--gray);
   margin-bottom: 16px;
   flex: 1;
-  overflow-y: auto;
-  max-height: 120px;
-  padding-right: 8px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-light) transparent;
-}
-
-.project-description::-webkit-scrollbar {
-  width: 4px;
-}
-
-.project-description::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
-}
-
-.project-description::-webkit-scrollbar-thumb {
-  background: var(--primary-light);
-  border-radius: 10px;
-}
-
-.project-description::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  /* Removed overflow-y: auto and max-height for mobile */
+  /* overflow-y: auto; */
+  /* max-height: 120px; */
+  padding-right: 0; /* Removed padding for scrollbar */
+  /* Removed scrollbar styles */
 }
 
 .project-tech {
@@ -652,7 +633,7 @@ header {
   flex-wrap: wrap;
   gap: 8px;
   margin: 16px 0;
-  min-height: 60px;
+  min-height: 40px; /* Reduced min-height */
 }
 
 .tech-tag {
@@ -678,12 +659,6 @@ header {
   margin-top: 20px;
   flex-shrink: 0;
 }
-
-/* REMOVED SCROLL BUTTONS - NOT IN YOUR HTML */
-/* .scroll-buttons, .scroll-btn */
-
-/* REMOVED AUTO-SCROLL INDICATOR - NOT IN YOUR HTML */
-/* .projects-scroll-container:after */
 
 @keyframes pulse {
   0%,
@@ -1171,7 +1146,7 @@ footer:before {
   opacity: 0;
 }
 
-/* Notification Styles - NEEDED FOR CONTACT FORM */
+/* Notification Styles */
 .notification {
   position: fixed;
   top: 100px;
@@ -1277,7 +1252,7 @@ button:disabled {
 
   .project-card {
     flex: 0 0 340px;
-    height: 460px;
+    min-height: 440px; /* Reduced for tablet */
   }
 
   .project-img {
@@ -1337,9 +1312,17 @@ button:disabled {
     order: -1;
   }
 
-  /* Adjust project description for tablet */
+  /* Adjust project card for tablet */
+  .project-card {
+    flex: 0 0 300px;
+    min-height: auto; /* Auto height for tablet/mobile */
+    height: auto;
+  }
+
   .project-description {
-    max-height: 100px;
+    overflow: visible; /* Show full description */
+    max-height: none; /* Remove height limit */
+    -webkit-line-clamp: unset; /* Remove line clamp */
   }
 }
 
@@ -1395,8 +1378,9 @@ button:disabled {
   }
 
   .project-card {
-    flex: 0 0 300px;
-    height: 440px;
+    flex: 0 0 280px;
+    min-height: auto; /* Auto height on mobile */
+    height: auto;
   }
 
   .project-img {
@@ -1409,12 +1393,14 @@ button:disabled {
   }
 
   .project-description {
-    max-height: 90px;
     font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
   }
 
   .project-tech {
-    min-height: 50px;
+    min-height: auto; /* Remove min-height */
+    margin: 12px 0;
     gap: 6px;
   }
 
@@ -1478,8 +1464,9 @@ button:disabled {
   }
 
   .project-card {
-    flex: 0 0 280px;
-    height: 420px;
+    flex: 0 0 260px;
+    min-height: auto;
+    height: auto;
   }
 
   .project-img {
@@ -1488,13 +1475,11 @@ button:disabled {
   }
 
   .project-description {
-    max-height: 80px;
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .project-tech {
-    min-height: 40px;
     margin: 12px 0;
   }
 
@@ -1529,18 +1514,12 @@ button:disabled {
   }
 
   .project-card {
-    flex: 0 0 260px;
-    height: 400px;
+    flex: 0 0 240px;
   }
 
   .project-img {
     height: 120px;
     font-size: 1.75rem;
-  }
-
-  .project-description {
-    max-height: 70px;
-    font-size: 0.8rem;
   }
 
   .project-content {
