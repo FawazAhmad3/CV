@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Fawaz Ahmad - IT Graduate & AI Developer specializing in Machine Learning and Web Development"
+    />
+    <meta
+      name="keywords"
+      content="Fawaz Ahmad, AI Developer, Web Developer, Machine Learning, Python, JavaScript, Portfolio"
+    />
+    <meta name="author" content="Fawaz Ahmad" />
+    <meta
+      property="og:title"
+      content="Fawaz Ahmad | IT Graduate & AI Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Fawaz Ahmad - IT Graduate & AI Developer specializing in Machine Learning and Web Development"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fawazahmad3.github.io" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <!-- LinkedIn Profile Picture Config -->
+    <script>
+      window.LINKEDIN_CONFIG = {
+        profileUrl: "https://www.linkedin.com/in/fawaz-ahmad7/", // Your exact LinkedIn URL
+        updateInterval: 24 * 60 * 60 * 1000, // Check daily (24 hours)
+      };
+    </script>
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+      font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+      img-src 'self' data: https:;
+      connect-src 'self';
+      frame-src 'none';
+      object-src 'none';
+    "
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <title>Fawaz Ahmad | IT Graduate & AI Developer</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+    />
+
+    <!-- External Resources -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Internal Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fawaz Ahmad",
+        "url": "https://fawazahmad3.github.io",
+        "jobTitle": "AI & Web Developer",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Quaid-i-Azam University"
+        },
+        "sameAs": [
+          "https://github.com/FawazAhmad3",
+          "https://www.linkedin.com/in/fawaz-ahmad7/",
+          "https://www.fiverr.com/fawaz03"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <a href="#" class="logo" aria-label="Fawaz Ahmad Portfolio"
+          >Fawaz<span>Ahmad</span></a
+        >
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary" aria-label="Hire me"
+            >Hire Me</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- CV Download Button -->
+      <div class="cv-download">
+        <button class="cv-btn" id="downloadCvBtn" aria-label="Download CV">
+          <i class="fas fa-download"></i>
+          <span>Download CV</span>
+        </button>
+      </div>
+
+      <!-- 🔥 HERO SECTION - LOCAL picture.jpg WORKS 100% -->
+      <section class="hero" id="home">
+        <div class="container hero-container">
+          <div class="hero-image">
+            <!-- ✅ YOUR LOCAL picture.jpg - PERFECT -->
+            <div
+              class="profile-img"
+              id="profileImg"
+              role="img"
+              aria-label="Fawaz Ahmad profile picture"
+            >
+              <img
+                src="picture.jpg"
+                alt="Fawaz Ahmad - Professional Photo"
+                class="profile-photo"
+                id="profilePhoto"
+                loading="eager"
+              />
+              <!-- Fallback icon -->
+              <i class="fas fa-user" id="profileIcon" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="hero-content">
+            <div class="hero-subtitle">AI & Web Developer</div>
+            <h1>Fawaz Ahmad</h1>
+            <p class="hero-description">
+              IT graduate from Quaid-i-Azam University with hands-on experience
+              in AI, machine learning, and web development. Former Vice
+              President of AICP-QAU, skilled in Python, C++, and modern web
+              technologies.
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-code"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i> Contact Me
+              </a>
+            </div>
+            <div class="quick-stats">
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Professional Roles</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>About Me</h2>
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I'm an IT graduate from Quaid-i-Azam University with a passion
+                for artificial intelligence, machine learning, and web
+                development. My academic journey has equipped me with strong
+                technical skills and practical experience in building
+                intelligent systems and responsive web applications.
+              </p>
+              <p>
+                As the former Vice President of AICP-QAU (Artificial
+                Intelligence Community of Pakistan), I've developed leadership
+                skills and contributed to fostering the AI community at my
+                university. I'm currently working as a Web Developer (Remote) at
+                Digital Tent Studio while also pursuing my final year project on
+                Real-time Suspicious Activity Detection System.
+              </p>
+            </div>
+            <div class="about-info">
+              <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <h4>Education</h4>
+                  <p>BS Information Technology</p>
+                  <p>Quaid-i-Azam University</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Rawalpindi, Pakistan</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                  <h4>Experience</h4>
+                  <p>Web Developer (Remote)</p>
+                  <p>Digital Tent Studio</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-certificate"></i>
+                <div>
+                  <h4>Specialization</h4>
+                  <p>AI & Machine Learning</p>
+                  <p>Web Development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-title">
+            <h2>Experience & Education</h2>
+          </div>
+          <div class="experience-tabs">
+            <button class="tab-btn active" data-tab="work">
+              Work Experience
+            </button>
+            <button class="tab-btn" data-tab="education">Education</button>
+            <button class="tab-btn" data-tab="achievements">
+              Achievements
+            </button>
+          </div>
+
+          <div class="tab-content active" id="work-content">
+            <div class="timeline-item">
+              <span class="timeline-date">Jul 2025 - Present</span>
+              <h3>Web Developer (Remote)</h3>
+              <h4>Digital Tent Studio, Islamabad</h4>
+              <p>
+                Developing and maintaining front-end components using HTML, CSS,
+                JavaScript for various client projects. Collaborating with
+                design and backend teams to implement responsive web interfaces.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Aug 2024 - Sep 2024</span>
+              <h3>Machine Learning & Deep Learning Intern</h3>
+              <h4>National Centre for Physics (AITeC), Islamabad</h4>
+              <p>
+                Built and trained AI models with Scikit-learn and TensorFlow for
+                research projects. Worked on model evaluation, documentation,
+                and deployment of machine learning solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="education-content">
+            <div class="timeline-item">
+              <span class="timeline-date">Sep 2021 - Aug 2025</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <h4>Quaid-i-Azam University, Islamabad</h4>
+              <p>
+                GPA: 3.3/4.0 | EQF Level 6. Focus on Artificial Intelligence,
+                Machine Learning, Software Development, and Web Technologies.
+                Active member of AICP and IIT Society.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="achievements-content">
+            <div class="timeline-item">
+              <span class="timeline-date">2024 - 2025</span>
+              <h3>Vice President, AICP QAU Student Chapter</h3>
+              <h4>Artificial Intelligence Community of Pakistan</h4>
+              <p>
+                Awarded Certificate of Recognition for valuable contributions
+                and successful completion of tenure. Organized AI-related
+                events, fostered student engagement, and supported university's
+                AI community.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2025</span>
+              <h3>Participant at COMPPEC 2025</h3>
+              <h4>NUST EME National Exhibition</h4>
+              <p>
+                Participated in national-level computing competition showcasing
+                technical projects and innovations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projects</h2>
+          </div>
+          <div class="projects-scroll-container" id="projectsContainer">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="project-content">
+                <h3>Real-time Suspicious Activity Detection</h3>
+                <p>Final Year Project | Sep 2024 - Jul 2025</p>
+                <p>
+                  Real-time intelligent surveillance system using Python,
+                  OpenCV, and Google Gemini API to detect suspicious activities
+                  including weapon handling, fighting, fire, and smoking.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">Gemini API</span>
+                  <span class="tech-tag">SQLite</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/FawazAhmad3/Activity-detection-through-api-free/main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline"
+                  >
+                    <i class="fab fa-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-hand-paper"></i>
+              </div>
+              <div class="project-content">
+                <h3>Hand Gesture Brightness Control</h3>
+                <p>Semester Project</p>
+                <p>
+                  Used MediaPipe and OpenCV to create a gesture-controlled
+                  system that adjusts screen brightness in real-time based on
+                  hand gestures.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">MediaPipe</span>
+                  <span class="tech-tag">OpenCV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <div class="project-content">
+                <h3>Disease Prediction App</h3>
+                <p>Semester Project</p>
+                <p>
+                  Machine learning-based application to predict potential
+                  illnesses based on user-input symptoms using trained datasets.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Machine Learning</span>
+                  <span class="tech-tag">Scikit-learn</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="project-content">
+                <h3>File Management System</h3>
+                <p>Semester Project</p>
+                <p>
+                  JavaFX + XAMPP-based desktop application for file management
+                  with user authentication, file categorization, and search
+                  functionality.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaFX</span>
+                  <span class="tech-tag">XAMPP</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/FawazAhmad3/File_management_System"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline"
+                  >
+                    <i class="fab fa-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="project-content">
+                <h3>IIT Department Web Portal</h3>
+                <p>Semester Project</p>
+                <p>
+                  Developed a web portal for department information sharing
+                  using HTML, CSS, JavaScript, and XAMPP for backend
+                  functionality.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML/CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">XAMPP</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="project-content">
+                <h3>English Department DBMS</h3>
+                <p>Semester Project</p>
+                <p>
+                  Created a SQL web-based DBMS to manage staff and student
+                  records with login authentication and CRUD functionality.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">HTML/CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3>Technical Skills</h3>
+              <div class="skill-list">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">TensorFlow</div>
+                <div class="skill-item">OpenCV</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">Scikit-learn</div>
+                <div class="skill-item">SQL & SQLite</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">Microsoft Office</div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Soft Skills</h3>
+              <div class="skill-list">
+                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Leadership</div>
+                <div class="skill-item">Communication</div>
+                <div class="skill-item">Project Management</div>
+                <div class="skill-item">Team Collaboration</div>
+                <div class="skill-item">Public Speaking</div>
+                <div class="skill-item">Time Management</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications">
+        <div class="container">
+          <div class="section-title">
+            <h2>Certifications</h2>
+          </div>
+          <div class="certifications-grid">
+            <!-- Online Courses -->
+            <div class="certification-card">
+              <div class="cert-header">
+                <div class="cert-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <div>
+                  <h4>Advanced JavaScript</h4>
+                  <p class="cert-date">August 2025</p>
+                </div>
+              </div>
+              <p class="cert-provider">Scrimba</p>
+              <p>
+                Advanced concepts in JavaScript programming and modern web
+                development techniques.
+              </p>
+            </div>
+
+            <div class="certification-card">
+              <div class="cert-header">
+                <div class="cert-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div>
+                  <h4>Introduction to AI Concepts</h4>
+                  <p class="cert-date">July 2025</p>
+                </div>
+              </div>
+              <p class="cert-provider">Microsoft</p>
+              <p>
+                Fundamental concepts of artificial intelligence and machine
+                learning principles.
+              </p>
+            </div>
+
+            <div class="certification-card">
+              <div class="cert-header">
+                <div class="cert-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <h4>Getting Started with Data Science</h4>
+                  <p class="cert-date">July 2025</p>
+                </div>
+              </div>
+              <p class="cert-provider">Microsoft Fabric</p>
+              <p>
+                Introduction to data science concepts and tools in Microsoft
+                Fabric environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Get In Touch</h2>
+          </div>
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>fawazahmad913@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+92 311 0540839</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <p>Satellite Town, Rawalpindi, Pakistan</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="contact-form">
+              <h3>Send Me a Message</h3>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <a href="#" class="footer-logo" aria-label="Fawaz Ahmad Portfolio"
+          >Fawaz<span>Ahmad</span></a
+        >
+        <p class="footer-tagline">
+          IT graduate specializing in AI, machine learning, and web development.
+          Available for freelance projects and full-time opportunities.
+        </p>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/FawazAhmad3"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="GitHub profile"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/fawaz-ahmad7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="LinkedIn profile"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="mailto:fawazahmad913@gmail.com"
+            class="social-link"
+            aria-label="Send email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://www.fiverr.com/fawaz03/buying?source=avatar_menu_profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Fiverr profile"
+          >
+            <i class="fas fa-briefcase"></i>
+          </a>
+        </div>
+
+        <a
+          href="https://www.fiverr.com/fawaz03/buying?source=avatar_menu_profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hire-me-btn"
+        >
+          <i class="fas fa-briefcase"></i> Hire Me on Fiverr
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="copyright">
+          <p>&copy; 2025 Fawaz Ahmad. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
