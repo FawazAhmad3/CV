@@ -133,9 +133,14 @@
           </ul>
         </nav>
         <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary" aria-label="Hire me"
-            >Hire Me</a
+          <a
+            href="https://www.fiverr.com/fawaz03/buying?source=avatar_menu_profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
           >
+            <i class="fas fa-briefcase"></i> Hire Me
+          </a>
         </div>
       </div>
     </header>
@@ -178,8 +183,7 @@
             <p class="hero-description">
               IT graduate from Quaid-i-Azam University with hands-on experience
               in AI, machine learning, and web development. Former Vice
-              President of AICP-QAU, skilled in Python, C++, and modern web
-              technologies.
+              President of AICP-QAU, skilled in Python, C++, and HTML/CSS.
             </p>
             <div class="hero-btns">
               <a href="#projects" class="btn btn-primary">
@@ -216,19 +220,26 @@
           <div class="about-content">
             <div class="about-text">
               <p>
-                I'm an IT graduate from Quaid-i-Azam University with a passion
-                for artificial intelligence, machine learning, and web
-                development. My academic journey has equipped me with strong
-                technical skills and practical experience in building
-                intelligent systems and responsive web applications.
+                I’m Fawaz Ahmad, an IT graduate and web developer with a strong
+                interest in building practical, real-world systems. I recently
+                completed my BS in Information Technology from Quaid-i-Azam
+                University, where I worked on projects that combine web
+                development, computer vision, and machine learning.
               </p>
               <p>
-                As the former Vice President of AICP-QAU (Artificial
-                Intelligence Community of Pakistan), I've developed leadership
-                skills and contributed to fostering the AI community at my
-                university. I'm currently working as a Web Developer (Remote) at
-                Digital Tent Studio while also pursuing my final year project on
-                Real-time Suspicious Activity Detection System.
+                I enjoy turning ideas into working products. My experience
+                includes developing role-based web portals, automation tools,
+                and AI-powered applications. One of my major projects was a
+                real-time suspicious activity detection system using Python,
+                OpenCV, and AI APIs. I’ve also built systems for gesture
+                control, disease prediction, and database-driven university
+                portals.
+              </p>
+              <p>
+                I have hands-on experience with HTML, CSS, JavaScript, Python,
+                PostgreSQL, and Git. I currently work as a remote Web Developer,
+                where I focus on building and maintaining web applications while
+                collaborating with teams online.
               </p>
             </div>
             <div class="about-info">
@@ -288,7 +299,7 @@
             <div class="timeline-item">
               <span class="timeline-date">Jul 2025 - Present</span>
               <h3>Web Developer (Remote)</h3>
-              <h4>Digital Tent Studio, Islamabad</h4>
+              <h4>Digital Tent Studio, Australia</h4>
               <p>
                 Developing and maintaining front-end components using HTML, CSS,
                 JavaScript for various client projects. Collaborating with
@@ -315,7 +326,6 @@
               <p>
                 GPA: 3.3/4.0 | EQF Level 6. Focus on Artificial Intelligence,
                 Machine Learning, Software Development, and Web Technologies.
-                Active member of AICP and IIT Society.
               </p>
             </div>
           </div>
@@ -341,6 +351,32 @@
                 technical projects and innovations.
               </p>
             </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2025</span>
+              <h3>Organize Open House</h3>
+              <h4>
+                Institute of Information Technology, Quaid-i-Azam University,
+                Islamabad
+              </h4>
+              <p>
+                Managed the Open House event for Final Year Students at
+                Quaid-i-Azam University, coordinating logistics and student
+                engagement.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2025</span>
+              <h3>
+                Certificate for Organizing International Workshop on Microsoft
+                Technologies
+              </h3>
+              <h4>Pak-Finland Capacity Building Initiative (Phase-l)</h4>
+              <h4>Quaid-i-Azam University, Islamabad</h4>
+              <p>
+                Organized a workshop on Microsoft Technologies under the
+                Pak-Finland initiative at Quaid-i-Azam University.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -352,6 +388,30 @@
             <h2>Projects</h2>
           </div>
           <div class="projects-scroll-container" id="projectsContainer">
+            <div class="project-card">
+              <div class="project-img">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="project-content">
+                <h3>University Management System</h3>
+                <!-- <p>Final Year Project | Sep 2024 - Jul 2025</p> -->
+                <p>
+                  University Management SaaS Portal is a comprehensive
+                  Flask-based web application supporting 5 distinct roles
+                  (Student, Teacher, Office Staff, HOD, System Admin) with
+                  granular permissions across multi-tenant universities and
+                  departments. It manages the complete academic lifecycle from
+                  enrollment to reporting with robust security, notifications,
+                  and approval workflows.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python Flask</span>
+                  <span class="tech-tag">Jinja</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Replit Host</span>
+                </div>
+              </div>
+            </div>
             <!-- Project 1 -->
             <div class="project-card">
               <div class="project-img">
@@ -546,57 +606,323 @@
           <div class="section-title">
             <h2>Certifications</h2>
           </div>
-          <div class="certifications-grid">
-            <!-- Online Courses -->
-            <div class="certification-card">
-              <div class="cert-header">
-                <div class="cert-icon">
-                  <i class="fab fa-js-square"></i>
-                </div>
-                <div>
-                  <h4>Advanced JavaScript</h4>
-                  <p class="cert-date">August 2025</p>
-                </div>
-              </div>
-              <p class="cert-provider">Scrimba</p>
+
+          <div class="experience-tabs">
+            <button class="tab-btn active" data-tab="online-courses">
+              Online Courses
+            </button>
+            <button class="tab-btn" data-tab="workshops">
+              Workshops & Technical
+            </button>
+          </div>
+
+          <!-- Online Courses Tab Content -->
+          <div class="tab-content active" id="online-courses-content">
+            <div class="timeline-item">
+              <span class="timeline-date">Aug 2025</span>
+              <h3>Advanced JavaScript</h3>
+              <h4>Scrimba</h4>
               <p>
                 Advanced concepts in JavaScript programming and modern web
                 development techniques.
               </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
             </div>
 
-            <div class="certification-card">
-              <div class="cert-header">
-                <div class="cert-icon">
-                  <i class="fas fa-brain"></i>
-                </div>
-                <div>
-                  <h4>Introduction to AI Concepts</h4>
-                  <p class="cert-date">July 2025</p>
-                </div>
-              </div>
-              <p class="cert-provider">Microsoft</p>
+            <div class="timeline-item">
+              <span class="timeline-date">Jul 2025</span>
+              <h3>Introduction to AI Concepts</h3>
+              <h4>Microsoft</h4>
               <p>
                 Fundamental concepts of artificial intelligence and machine
                 learning principles.
               </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
             </div>
 
-            <div class="certification-card">
-              <div class="cert-header">
-                <div class="cert-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <div>
-                  <h4>Getting Started with Data Science</h4>
-                  <p class="cert-date">July 2025</p>
-                </div>
-              </div>
-              <p class="cert-provider">Microsoft Fabric</p>
+            <div class="timeline-item">
+              <span class="timeline-date">Jul 2025</span>
+              <h3>Getting Started with Data Science in Microsoft Fabric</h3>
+              <h4>Microsoft</h4>
               <p>
                 Introduction to data science concepts and tools in Microsoft
                 Fabric environment.
               </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Feb 2025</span>
+              <h3>Learn Tailwind CSS</h3>
+              <h4>Scrimba</h4>
+              <p>
+                Mastering Tailwind CSS framework for modern web development and
+                responsive design.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Aug 2024</span>
+              <h3>Manage Repository Changes by Using Pull Request on GitHub</h3>
+              <h4>Microsoft</h4>
+              <p>
+                Version control, collaboration workflows, and pull request
+                management using GitHub.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Mar 2023</span>
+              <h3>Introduction to Cybersecurity Tools & Cyber Attacks</h3>
+              <h4>Credly by Pearson</h4>
+              <p>
+                Foundational knowledge of cybersecurity tools and common cyber
+                attack methodologies.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Mar 2023</span>
+              <h3>Ethical Hacking Essentials (EHE)</h3>
+              <h4>EC-Council</h4>
+              <p>
+                Fundamental ethical hacking principles, tools, and methodologies
+                for security testing.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Mar 2023</span>
+              <h3>Introduction to Cybersecurity Tools & Cyber Attacks</h3>
+              <h4>IBM</h4>
+              <p>
+                Cybersecurity fundamentals, threat landscape analysis, and
+                security tool implementation.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2023</span>
+              <h3>Introduction to Microsoft Excel</h3>
+              <h4>Coursera</h4>
+              <p>
+                Basic to intermediate Excel functions, formulas, and data
+                analysis techniques.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2023</span>
+              <h3>Getting Started with Microsoft PowerPoint</h3>
+              <h4>Coursera</h4>
+              <p>
+                Presentation design, slide creation, and effective visual
+                communication skills.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2023</span>
+              <h3>Getting Started with Microsoft Word</h3>
+              <h4>Coursera</h4>
+              <p>
+                Document formatting, editing tools, and professional document
+                creation techniques.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2023</span>
+              <h3>Command Line in Linux</h3>
+              <h4>Coursera</h4>
+              <p>
+                Linux terminal navigation, file system operations, and
+                command-line proficiency.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workshops & Technical Tab Content -->
+          <div class="tab-content" id="workshops-content">
+            <div class="timeline-item">
+              <span class="timeline-date">May 2025</span>
+              <h3>CCNA: Introduction to Networks</h3>
+              <h4>Cisco</h4>
+              <p>
+                Networking fundamentals, TCP/IP protocols, and Cisco network
+                device configuration.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">May 2025</span>
+              <h3>Cisco Packet Tracer</h3>
+              <h4>Ezxprt</h4>
+              <p>
+                Network simulation, configuration, and troubleshooting using
+                Cisco Packet Tracer.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">May 2025</span>
+              <h3>VMware Workstation</h3>
+              <h4>Ezxprt</h4>
+              <p>
+                Virtualization concepts, VM creation, management, and network
+                configuration.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2025</span>
+              <h3>International Workshop on Microsoft Technologies</h3>
+              <h4>Pak-Finland Initiative at Quaid-i-Azam University</h4>
+              <p>
+                Advanced Microsoft technologies, cloud services, and enterprise
+                solution deployment.
+              </p>
+              <div class="certificate-link">
+                <a
+                  href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View Certificate
+                </a>
+              </div>
             </div>
           </div>
         </div>
