@@ -91,93 +91,267 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-  // ==================== PROJECTS CAROUSEL ====================
+  // ==================== PROJECTS DATA ====================
+  const projectsData = [
+    {
+      id: 1,
+      title: "University Management System",
+      category: "Python Flask • PostgreSQL",
+      description: "University Management SaaS Portal is a comprehensive Flask-based web application supporting 5 distinct roles (Student, Teacher, Office Staff, HOD, System Admin) with granular permissions across multi-tenant universities and departments.",
+      tech: ["Python Flask", "Jinja", "PostgreSQL", "Replit Host"],
+      icon: "fa-database",
+      color: "#6366f1",
+      links: []
+    },
+    {
+      id: 2,
+      title: "Real-time Suspicious Activity Detection",
+      category: "Python • OpenCV • AI",
+      description: "Real-time intelligent surveillance system using Python, OpenCV, and Google Gemini API to detect suspicious activities including weapon handling, fighting, fire, and smoking.",
+      tech: ["Python", "OpenCV", "Gemini API", "SQLite"],
+      icon: "fa-shield-alt",
+      color: "#10b981",
+      links: [
+        { label: "View Code", url: "https://github.com/FawazAhmad3/Activity-detection-through-api-free/main", icon: "fa-github" }
+      ]
+    },
+    {
+      id: 3,
+      title: "Hand Gesture Brightness Control",
+      category: "Python • Computer Vision",
+      description: "Used MediaPipe and OpenCV to create a gesture-controlled system that adjusts screen brightness in real-time based on hand gestures.",
+      tech: ["Python", "MediaPipe", "OpenCV"],
+      icon: "fa-hand-paper",
+      color: "#f59e0b",
+      links: []
+    },
+    {
+      id: 4,
+      title: "Disease Prediction App",
+      category: "Machine Learning • Python",
+      description: "Machine learning-based application to predict potential illnesses based on user-input symptoms using trained datasets.",
+      tech: ["Python", "Machine Learning", "Scikit-learn"],
+      icon: "fa-heartbeat",
+      color: "#ef4444",
+      links: []
+    },
+    {
+      id: 5,
+      title: "File Management System",
+      category: "JavaFX • MySQL",
+      description: "JavaFX + XAMPP-based desktop application for file management with user authentication, file categorization, and search functionality.",
+      tech: ["JavaFX", "XAMPP", "MySQL"],
+      icon: "fa-folder-open",
+      color: "#3b82f6",
+      links: [
+        { label: "View Code", url: "https://github.com/FawazAhmad3/File_management_System", icon: "fa-github" }
+      ]
+    },
+    {
+      id: 6,
+      title: "IIT Department Web Portal",
+      category: "Web Development",
+      description: "Developed a web portal for department information sharing using HTML, CSS, JavaScript, and XAMPP for backend functionality.",
+      tech: ["HTML/CSS", "JavaScript", "XAMPP"],
+      icon: "fa-laptop-code",
+      color: "#8b5cf6",
+      links: []
+    },
+    {
+      id: 7,
+      title: "English Department DBMS",
+      category: "SQL • PHP • Web",
+      description: "Created a SQL web-based DBMS to manage staff and student records with login authentication and CRUD functionality.",
+      tech: ["SQL", "PHP", "HTML/CSS"],
+      icon: "fa-chalkboard-teacher",
+      color: "#ec4899",
+      links: []
+    }
+  ];
 
-  // 5. PROJECTS CAROUSEL
-  const projectsContainer = document.querySelector(
-    ".projects-scroll-container"
-  );
-  if (projectsContainer) {
-    const projectCards = projectsContainer.querySelectorAll(".project-card");
-    let autoScrollInterval,
-      currentScrollPosition = 0;
-    const scrollAmount = 350;
+  // ==================== ORBITAL PROJECTS GALLERY ====================
+  const projectsSection = document.getElementById("projects");
+  
+  if (projectsSection) {
+    const orbitalContainer = document.createElement("div");
+    orbitalContainer.className = "orbital-container";
+    
+    // Create Header for the section (re-using current title but adding subtext)
+    const sectionHeader = `
+      <div class="section-title orbital-header">
+        <h2>My Projects</h2>
+        <p>From AI systems to complex web portals — interactive showcase.</p>
+      </div>
+    `;
+    
+    const orbitalGallery = `
+      <div class="orbital-wrapper">
+        <div class="orbital-orbit">
+          <div class="orbital-path"></div>
+          <div class="orbital-icons-container" id="orbitalIcons"></div>
+        </div>
+        
+        <div class="central-card-wrapper">
+          <div class="central-card" id="centralCard">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="project-badge" id="cardCategory"></div>
+              <div class="project-icon-large"><i id="cardIcon" class="fas"></i></div>
+              <h3 id="cardTitle"></h3>
+              <p id="cardDescription"></p>
+              <div class="project-tech-tags" id="cardTech"></div>
+              <div class="project-action-links" id="cardLinks"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    projectsSection.innerHTML = `<div class="container">${sectionHeader}${orbitalGallery}</div>`;
+    
+    const iconsContainer = document.getElementById("orbitalIcons");
+    const centralCard = document.getElementById("centralCard");
+    const orbitalOrbit = document.querySelector(".orbital-orbit");
+    let activeProjectIndex = 0;
+    
+    // Helper to convert hex to RGB for CSS variables (glow effects)
+    function hexToRgb(hex) {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? 
+        `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : 
+        "99, 102, 241";
+    }
 
-    console.log(`📁 Found ${projectCards.length} projects`);
-
-    function scrollNext() {
-      currentScrollPosition += scrollAmount;
-      if (
-        currentScrollPosition >
-        projectsContainer.scrollWidth - projectsContainer.clientWidth
-      ) {
-        currentScrollPosition = 0;
+    // Function to update the central card
+    function updateCentralCard(project) {
+      const cardTitle = document.getElementById("cardTitle");
+      const cardCategory = document.getElementById("cardCategory");
+      const cardIcon = document.getElementById("cardIcon");
+      const cardDescription = document.getElementById("cardDescription");
+      const cardTech = document.getElementById("cardTech");
+      const cardLinks = document.getElementById("cardLinks");
+      
+      // Animate out
+      centralCard.classList.remove("active");
+      
+      setTimeout(() => {
+        cardTitle.textContent = project.title;
+        cardCategory.textContent = project.category;
+        cardIcon.className = `fas ${project.icon}`;
+        cardDescription.textContent = project.description;
+        
+        // Render tech tags
+        cardTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("");
+        
+        // Render links
+        cardLinks.innerHTML = project.links.length > 0 ? project.links.map(l => `
+          <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab ${l.icon}"></i> ${l.label}
+          </a>
+        `).join("") : "";
+        
+        // Update glow colors
+        centralCard.style.setProperty('--project-color', project.color);
+        centralCard.style.setProperty('--project-color-rgb', hexToRgb(project.color));
+        
+        // Animate in
+        centralCard.classList.add("active");
+      }, 400);
+    }
+    
+    // Render orbital icons
+    function renderOrbitalIcons() {
+      const radius = window.innerWidth > 768 ? 400 : 180;
+      const count = projectsData.length;
+      
+      // Clear container
+      iconsContainer.innerHTML = '';
+      
+      // Create line
+      let activeLine = document.querySelector(".active-line");
+      if (!activeLine) {
+        activeLine = document.createElement("div");
+        activeLine.className = "active-line";
+        orbitalOrbit.appendChild(activeLine);
       }
-      projectsContainer.scrollTo({
-        left: currentScrollPosition,
-        behavior: "smooth",
+      
+      projectsData.forEach((project, index) => {
+        const angle = (index / count) * 2 * Math.PI - Math.PI / 2;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        const iconBtn = document.createElement("button");
+        iconBtn.className = `orbital-icon-btn ${index === activeProjectIndex ? "active" : ""}`;
+        iconBtn.style.transform = `translate(${x}px, ${y}px)`;
+        iconBtn.innerHTML = `<i class="fas ${project.icon}"></i>`;
+        iconBtn.setAttribute("aria-label", `View ${project.title}`);
+        
+        // Custom properties for hover scaling
+        iconBtn.style.setProperty('--tw-translate-x', `${x}px`);
+        iconBtn.style.setProperty('--tw-translate-y', `${y}px`);
+        
+        iconBtn.onclick = () => {
+          if (index !== activeProjectIndex) {
+            activeProjectIndex = index;
+            document.querySelectorAll(".orbital-icon-btn").forEach(btn => btn.classList.remove("active"));
+            iconBtn.classList.add("active");
+            
+            updateCentralCard(project);
+            rotateOrbit(index);
+            updateLine(index, radius);
+          }
+        };
+        
+        iconsContainer.appendChild(iconBtn);
       });
+      
+      // Initial state
+      updateCentralCard(projectsData[activeProjectIndex]);
+      rotateOrbit(activeProjectIndex);
+      updateLine(activeProjectIndex, radius);
     }
-
-    function scrollPrev() {
-      currentScrollPosition -= scrollAmount;
-      if (currentScrollPosition < 0) {
-        currentScrollPosition =
-          projectsContainer.scrollWidth - projectsContainer.clientWidth;
+    
+    // Function to update the connecting line
+    function updateLine(index, radius) {
+      const activeLine = document.querySelector(".active-line");
+      if (activeLine) {
+        const angle = (index / projectsData.length) * 360 - 90;
+        activeLine.style.width = `${radius - 40}px`;
+        activeLine.style.transform = `rotate(${angle}deg)`;
+        activeLine.style.setProperty('--project-color', projectsData[index].color);
       }
-      projectsContainer.scrollTo({
-        left: currentScrollPosition,
-        behavior: "smooth",
+    }
+    
+    let currentRotation = 0;
+    function rotateOrbit(index) {
+      const count = projectsData.length;
+      const targetRotation = -(index / count) * 360;
+      
+      // Smooth rotation logic
+      const diff = ((targetRotation - currentRotation + 180) % 360) - 180;
+      currentRotation += diff;
+      
+      iconsContainer.style.transform = `rotate(${currentRotation}deg)`;
+      
+      // Keep icons upright
+      document.querySelectorAll(".orbital-icon-btn").forEach(btn => {
+        btn.style.setProperty('--icon-rotation', `${-currentRotation}deg`);
       });
     }
-
-    function startAutoScroll() {
-      if (autoScrollInterval) clearInterval(autoScrollInterval);
-      autoScrollInterval = setInterval(scrollNext, 5000);
-    }
-
-    function stopAutoScroll() {
-      if (autoScrollInterval) clearInterval(autoScrollInterval);
-    }
-
-    // Add scroll buttons if they exist (future feature)
-    document
-      .querySelectorAll('.next, .right, [class*="next"], [class*="right"]')
-      .forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          stopAutoScroll();
-          scrollNext();
-          setTimeout(startAutoScroll, 3000);
-        });
-      });
-
-    document
-      .querySelectorAll('.prev, .left, [class*="prev"], [class*="left"]')
-      .forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          stopAutoScroll();
-          scrollPrev();
-          setTimeout(startAutoScroll, 3000);
-        });
-      });
-
-    // Pause auto-scroll on hover
-    projectsContainer.addEventListener("mouseenter", stopAutoScroll);
-    projectsContainer.addEventListener("mouseleave", startAutoScroll);
-
-    // Restart auto-scroll after manual scroll
-    let scrollTimeout;
-    projectsContainer.addEventListener("scroll", () => {
-      stopAutoScroll();
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(startAutoScroll, 4000);
+    
+    renderOrbitalIcons();
+    
+    // Handle resize
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        renderOrbitalIcons();
+      }, 250);
     });
-
-    projectsContainer.style.scrollBehavior = "smooth";
-    setTimeout(startAutoScroll, 2000);
   }
+
+  // ==================== EXPERIENCE TABS ====================
 
   // ==================== EXPERIENCE TABS ====================
 
