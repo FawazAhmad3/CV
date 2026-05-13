@@ -91,7 +91,7 @@ body {
 }
 
 section {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 h1,
@@ -114,7 +114,7 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   position: relative;
   display: inline-block;
 }
@@ -229,7 +229,7 @@ a {
 
 .section-title {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
 }
 
 .section-title h2 {
@@ -391,8 +391,8 @@ header {
 
 /* Hero Section */
 .hero {
-  padding-top: 200px;
-  padding-bottom: 140px;
+  padding-top: 160px;
+  padding-bottom: 100px;
   background: linear-gradient(135deg, var(--light) 0%, #e2e8f0 100%);
   position: relative;
   overflow: hidden;
@@ -478,14 +478,14 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-top: 80px;
-  padding-top: 40px;
+  margin-top: 60px;
+  padding-top: 30px;
   border-top: 1px solid var(--light-gray);
 }
 
 .stat-item {
   text-align: center;
-  padding: 24px;
+  padding: 20px;
   background: var(--white);
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -525,7 +525,7 @@ header {
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -542,7 +542,7 @@ header {
 }
 
 .info-item {
-  padding: 24px;
+  padding: 20px;
   background: var(--white);
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -643,6 +643,17 @@ header {
   display: block;
 }
 
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 30px;
+  border-left: 2px solid var(--light-gray);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
 .timeline-date {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -658,7 +669,7 @@ header {
 .projects {
   position: relative;
   overflow: hidden;
-  padding: 140px 0;
+  padding: 100px 0;
   background: var(--light);
 }
 
@@ -667,7 +678,7 @@ header {
   background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%);
 }
 .orbital-header {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 10;
 }
@@ -684,7 +695,7 @@ header {
   align-items: center;
   justify-content: center;
   perspective: 2000px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .orbital-orbit {
@@ -905,6 +916,21 @@ header {
   box-shadow: 0 0 15px var(--project-color, var(--primary));
 }
 
+.mobile-hint {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-top: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+  animation: pulseHint 2s infinite;
+}
+
+@keyframes pulseHint {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(5px); }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .orbital-orbit {
@@ -914,15 +940,81 @@ header {
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 60px 0;
+  }
   .orbital-wrapper {
-    height: 700px;
+    height: 600px;
   }
   .orbital-orbit {
-    width: 400px;
-    height: 400px;
+    width: 440px;
+    height: 440px;
   }
   .central-card-wrapper {
-    width: 90%;
+    width: 280px;
+    transition: transform 0.4s ease;
+  }
+  .central-card {
+    max-height: 180px;
+    padding: 24px;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, transform 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .central-card:hover,
+  .central-card:active {
+    max-height: 600px;
+    padding-bottom: 32px;
+  }
+  .central-card p,
+  .central-card .project-tech-tags,
+  .central-card .project-action-links {
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .central-card:hover p,
+  .central-card:active p {
+    opacity: 1;
+    max-height: 200px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .central-card:hover .project-tech-tags,
+  .central-card:active .project-tech-tags {
+    opacity: 1;
+    max-height: 150px;
+    margin-bottom: 24px;
+  }
+  .central-card:hover .project-action-links,
+  .central-card:active .project-action-links {
+    opacity: 1;
+    max-height: 100px;
+  }
+  .project-icon-large {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+  .central-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .project-badge {
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    font-size: 0.6rem;
+  }
+  .mobile-hint {
+    display: block;
+  }
+  .central-card:hover .mobile-hint,
+  .central-card:active .mobile-hint {
+    display: none;
   }
 }
 
@@ -934,12 +1026,12 @@ header {
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 48px;
+  gap: 32px;
 }
 
 .skill-category {
   background: var(--light);
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: var(--shadow);
   border: 1px solid var(--light-gray);
@@ -1009,7 +1101,7 @@ header {
 .certification-card {
   background: var(--white);
   border-radius: 20px;
-  padding: 32px;
+  padding: 24px;
   box-shadow: var(--shadow);
   border: 1px solid var(--light-gray);
   transition: var(--transition);
@@ -1080,21 +1172,21 @@ header {
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 24px;
+  padding: 20px;
   background: var(--light);
   border-radius: 16px;
   transition: var(--transition);
@@ -1120,7 +1212,7 @@ header {
 
 .contact-form {
   background: var(--light);
-  padding: 40px;
+  padding: 30px;
   border-radius: 24px;
   box-shadow: var(--shadow);
   border: 1px solid var(--light-gray);
@@ -1162,7 +1254,7 @@ header {
 footer {
   background: var(--secondary);
   color: var(--white);
-  padding: 100px 0 40px;
+  padding: 70px 0 30px;
   position: relative;
   overflow: hidden;
 }

@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p id="cardDescription"></p>
               <div class="project-tech-tags" id="cardTech"></div>
               <div class="project-action-links" id="cardLinks"></div>
+              <div class="mobile-hint">Tap to view details</div>
             </div>
           </div>
         </div>
@@ -261,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Render orbital icons
     function renderOrbitalIcons() {
-      const radius = window.innerWidth > 768 ? 400 : 180;
+      const radius = window.innerWidth > 768 ? 400 : 220;
       const count = projectsData.length;
       
       // Clear container
