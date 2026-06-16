@@ -169,51 +169,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  // ==================== ORBITAL PROJECTS GALLERY ====================
+  // ==================== PROJECTS GALLERY RENDERING ====================
   const projectsSection = document.getElementById("projects");
   
   if (projectsSection) {
-    const orbitalContainer = document.createElement("div");
-    orbitalContainer.className = "orbital-container";
-    
-    // Create Header for the section (re-using current title but adding subtext)
-    const sectionHeader = `
-      <div class="section-title orbital-header">
-        <h2>My Projects</h2>
-        <p>From AI systems to complex web portals — interactive showcase.</p>
-      </div>
-    `;
-    
-    const orbitalGallery = `
-      <div class="orbital-wrapper">
-        <div class="orbital-orbit">
-          <div class="orbital-path"></div>
-          <div class="orbital-icons-container" id="orbitalIcons"></div>
-        </div>
-        
-        <div class="central-card-wrapper">
-          <div class="central-card" id="centralCard">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="project-badge" id="cardCategory"></div>
-              <div class="project-icon-large"><i id="cardIcon" class="fas"></i></div>
-              <h3 id="cardTitle"></h3>
-              <p id="cardDescription"></p>
-              <div class="project-tech-tags" id="cardTech"></div>
-              <div class="project-action-links" id="cardLinks"></div>
-              <div class="mobile-hint">Tap to view details</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-    
-    projectsSection.innerHTML = `<div class="container">${sectionHeader}${orbitalGallery}</div>`;
-    
-    const iconsContainer = document.getElementById("orbitalIcons");
-    const centralCard = document.getElementById("centralCard");
-    const orbitalOrbit = document.querySelector(".orbital-orbit");
+    let currentRenderMode = null; // 'mobile' or 'desktop'
     let activeProjectIndex = 0;
+    let currentRotation = 0;
     
     // Helper to convert hex to RGB for CSS variables (glow effects)
     function hexToRgb(hex) {
@@ -225,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the central card
     function updateCentralCard(project) {
+      const centralCard = document.getElementById("centralCard");
       const cardTitle = document.getElementById("cardTitle");
       const cardCategory = document.getElementById("cardCategory");
       const cardIcon = document.getElementById("cardIcon");
@@ -232,24 +195,30 @@ document.addEventListener("DOMContentLoaded", function () {
       const cardTech = document.getElementById("cardTech");
       const cardLinks = document.getElementById("cardLinks");
       
+      if (!centralCard) return;
+
       // Animate out
       centralCard.classList.remove("active");
       
       setTimeout(() => {
-        cardTitle.textContent = project.title;
-        cardCategory.textContent = project.category;
-        cardIcon.className = `fas ${project.icon}`;
-        cardDescription.textContent = project.description;
+        if (cardTitle) cardTitle.textContent = project.title;
+        if (cardCategory) cardCategory.textContent = project.category;
+        if (cardIcon) cardIcon.className = `fas ${project.icon}`;
+        if (cardDescription) cardDescription.textContent = project.description;
         
         // Render tech tags
-        cardTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("");
+        if (cardTech) {
+          cardTech.innerHTML = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("");
+        }
         
         // Render links
-        cardLinks.innerHTML = project.links.length > 0 ? project.links.map(l => `
-          <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-outline">
-            <i class="fab ${l.icon}"></i> ${l.label}
-          </a>
-        `).join("") : "";
+        if (cardLinks) {
+          cardLinks.innerHTML = project.links.length > 0 ? project.links.map(l => `
+            <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fab ${l.icon}"></i> ${l.label}
+            </a>
+          `).join("") : "";
+        }
         
         // Update glow colors
         centralCard.style.setProperty('--project-color', project.color);
@@ -260,9 +229,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 400);
     }
     
-    // Render orbital icons
+    // Render orbital icons (for desktop)
     function renderOrbitalIcons() {
-      const radius = window.innerWidth > 768 ? 400 : 220;
+      const iconsContainer = document.getElementById("orbitalIcons");
+      const centralCard = document.getElementById("centralCard");
+      const orbitalOrbit = document.querySelector(".orbital-orbit");
+      if (!iconsContainer || !centralCard || !orbitalOrbit) return;
+
+      const radius = 400; // Always 400 on desktop
       const count = projectsData.length;
       
       // Clear container
@@ -323,8 +297,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     
-    let currentRotation = 0;
     function rotateOrbit(index) {
+      const iconsContainer = document.getElementById("orbitalIcons");
+      if (!iconsContainer) return;
+
       const count = projectsData.length;
       const targetRotation = -(index / count) * 360;
       
@@ -339,15 +315,119 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.style.setProperty('--icon-rotation', `${-currentRotation}deg`);
       });
     }
+
+    function renderMobileGrid() {
+      const sectionHeader = `
+        <div class="section-title">
+          <h2>My Projects</h2>
+          <p>From AI systems to complex web portals — interactive showcase.</p>
+        </div>
+      `;
+      
+      const cardsHtml = projectsData.map(project => {
+        const linksHtml = project.links.length > 0 ? project.links.map(l => `
+          <a href="${l.url}" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab ${l.icon}"></i> ${l.label}
+          </a>
+        `).join("") : "";
+        
+        const techHtml = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("");
+        
+        return `
+          <div class="mobile-project-card" style="--project-color: ${project.color}; --project-color-rgb: ${hexToRgb(project.color)}">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="project-badge">${project.category}</div>
+              <div class="project-icon-large"><i class="fas ${project.icon}"></i></div>
+              <h3>${project.title}</h3>
+              <p>${project.description}</p>
+              <div class="project-tech-tags">${techHtml}</div>
+              ${linksHtml ? `<div class="project-action-links">${linksHtml}</div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join("");
+      
+      projectsSection.innerHTML = `
+        <div class="container">
+          ${sectionHeader}
+          <div class="projects-grid">
+            ${cardsHtml}
+          </div>
+        </div>
+      `;
+      
+      // Observe the new elements for scroll animations
+      if (window.scrollObserver) {
+        document.querySelectorAll(".mobile-project-card").forEach(el => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease";
+          window.scrollObserver.observe(el);
+        });
+      }
+    }
+
+    function renderDesktopOrbit() {
+      const sectionHeader = `
+        <div class="section-title orbital-header">
+          <h2>My Projects</h2>
+          <p>From AI systems to complex web portals — interactive showcase.</p>
+        </div>
+      `;
+      
+      const orbitalGallery = `
+        <div class="orbital-wrapper">
+          <div class="orbital-orbit">
+            <div class="orbital-path"></div>
+            <div class="orbital-icons-container" id="orbitalIcons"></div>
+          </div>
+          
+          <div class="central-card-wrapper">
+            <div class="central-card" id="centralCard">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="project-badge" id="cardCategory"></div>
+                <div class="project-icon-large"><i id="cardIcon" class="fas"></i></div>
+                <h3 id="cardTitle"></h3>
+                <p id="cardDescription"></p>
+                <div class="project-tech-tags" id="cardTech"></div>
+                <div class="project-action-links" id="cardLinks"></div>
+                <div class="mobile-hint">Tap to view details</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      projectsSection.innerHTML = `<div class="container">${sectionHeader}${orbitalGallery}</div>`;
+      renderOrbitalIcons();
+    }
+
+    function renderProjects() {
+      const isMobile = window.innerWidth < 992;
+      const targetMode = isMobile ? "mobile" : "desktop";
+      
+      if (currentRenderMode === targetMode) return;
+      
+      currentRenderMode = targetMode;
+      
+      if (isMobile) {
+        renderMobileGrid();
+      } else {
+        renderDesktopOrbit();
+      }
+    }
     
-    renderOrbitalIcons();
+    // Initial Render
+    renderProjects();
     
     // Handle resize
     let resizeTimer;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        renderOrbitalIcons();
+        renderProjects();
       }, 250);
     });
   }
@@ -469,10 +549,12 @@ document.addEventListener("DOMContentLoaded", function () {
     { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
   );
 
+  window.scrollObserver = observer;
+
   // Observe all elements for scroll animations
   document
     .querySelectorAll(
-      ".stat-item, .project-card, .timeline-item, .certification-card, .skill-category, .info-item, .contact-item"
+      ".stat-item, .project-card, .mobile-project-card, .timeline-item, .certification-card, .skill-category, .info-item, .contact-item"
     )
     .forEach((el) => {
       el.style.opacity = "0";

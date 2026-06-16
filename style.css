@@ -92,6 +92,7 @@ body {
 
 section {
   padding: 80px 0;
+  scroll-margin-top: 90px;
 }
 
 h1,
@@ -648,6 +649,19 @@ header {
   padding-left: 32px;
   margin-bottom: 30px;
   border-left: 2px solid var(--light-gray);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 32px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--light);
+  transition: var(--transition);
 }
 
 .timeline-item:last-child {
@@ -1622,6 +1636,75 @@ button:disabled {
   }
 }
 
+/* Projects Grid (Mobile & Tablet fallback) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.mobile-project-card {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  text-align: center;
+}
+
+[data-theme="light"] .mobile-project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .mobile-project-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .mobile-project-card h3 {
+  color: white;
+}
+
+.mobile-project-card p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+[data-theme="light"] .mobile-project-card p {
+  color: var(--gray);
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .hero-container,
@@ -1789,12 +1872,8 @@ button:disabled {
     font-size: 0.7rem;
   }
 
-  .timeline:before {
-    left: 20px;
-  }
-
   .timeline-item {
-    padding-left: 60px;
+    padding-left: 24px;
   }
 
   /* Profile Image for Mobile */
