@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fawaz-portfolio-site.netlify.app/sitemap.xml
