@@ -110,19 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function initThemeToggle() {
-    const header = document.querySelector(".nav-container");
-    if (header && !document.getElementById("themeToggle")) {
-      const toggleBtn = document.createElement("button");
-      toggleBtn.id = "themeToggle";
-      toggleBtn.className = "theme-toggle";
-      toggleBtn.setAttribute("aria-label", "Toggle theme");
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i><i class="fas fa-moon"></i>';
-      
-      // Insert before mobile menu button or CTA
-      const cta = header.querySelector(".cta-buttons");
-      if (cta) header.insertBefore(toggleBtn, cta);
-      else header.appendChild(toggleBtn);
-
+    const toggleBtn = document.getElementById("themeToggle");
+    if (toggleBtn) {
       toggleBtn.addEventListener("click", toggleTheme);
     }
 
@@ -170,20 +159,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const category = btn.getAttribute("data-tab");
       if (!category) return;
 
-      // Experience tabs toggle
-      if (["work", "education", "achievements"].includes(category)) {
-        document.querySelectorAll("#experience .tab-btn").forEach(b => b.classList.remove("active"));
-        document.querySelectorAll("#experience .tab-content").forEach(c => c.classList.remove("active"));
+      const parentSection = btn.closest("section");
+      if (parentSection) {
+        parentSection.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+        parentSection.querySelectorAll(".tab-content").forEach((c) => c.classList.remove("active"));
         btn.classList.add("active");
-        document.getElementById(category + "-content").classList.add("active");
-      }
-      
-      // Certifications tabs toggle
-      if (["online-courses", "workshops"].includes(category)) {
-        document.querySelectorAll("#certifications .tab-btn").forEach(b => b.classList.remove("active"));
-        document.querySelectorAll("#certifications .tab-content").forEach(c => c.classList.remove("active"));
-        btn.classList.add("active");
-        document.getElementById(category + "-content").classList.add("active");
+        const targetContent = document.getElementById(category + "-content");
+        if (targetContent) {
+          targetContent.classList.add("active");
+        }
       }
     });
   });

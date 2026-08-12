@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Fawaz Ahmad - IT Graduate & AI Developer specializing in Machine Learning and Web Development"
+      content="Portfolio of Fawaz Ahmad - Software Engineer & Web Developer with expertise in AI systems, machine learning, and web development. BSIT from Quaid-i-Azam University."
     />
     <meta
       name="keywords"
-      content="Fawaz Ahmad, AI Developer, Web Developer, Machine Learning, Python, JavaScript, Portfolio"
+      content="Fawaz Ahmad, Software Engineer, Web Developer, AI Developer, Machine Learning, Python, JavaScript, FRPD, Digital Tent Studio, NZF Australia, Portfolio"
     />
     <meta name="author" content="Fawaz Ahmad" />
     <meta
       property="og:title"
-      content="Fawaz Ahmad | IT Graduate & AI Developer"
+      content="Fawaz Ahmad | Software Engineer & Web Developer"
     />
     <meta
       property="og:description"
-      content="Portfolio of Fawaz Ahmad - IT Graduate & AI Developer specializing in Machine Learning and Web Development"
+      content="Portfolio of Fawaz Ahmad - Software Engineer & Web Developer specializing in Web Applications, AI Systems, and Machine Learning."
     />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#6366f1" />
 
-    <title>Fawaz Ahmad | IT Graduate & AI Developer</title>
+    <title>Fawaz Ahmad | Software Engineer & Web Developer</title>
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
@@ -46,7 +46,7 @@
       referrerpolicy="no-referrer"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@300;400;600&display=swap"
       rel="stylesheet"
       crossorigin="anonymous"
     />
@@ -61,14 +61,7 @@
     <header>
       <div class="container nav-container">
         <a href="#" class="logo" aria-label="Fawaz Ahmad Portfolio">Fawaz<span>Ahmad</span></a>
-        <button
-          class="mobile-menu-btn"
-          id="mobileMenuBtn"
-          aria-label="Toggle mobile menu"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
+        
         <nav aria-label="Main navigation">
           <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
@@ -80,15 +73,34 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="cta-buttons">
+
+        <div class="nav-actions">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle dark/light theme"
+          >
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          
           <a
-            href="https://www.fiverr.com/fawaz03/buying?source=avatar_menu_profile"
+            href="https://www.linkedin.com/in/fawaz-ahmad7/"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-primary"
+            class="btn btn-outline nav-linkedin-btn"
           >
-            <i class="fas fa-briefcase"></i> Hire Me
+            <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
           </a>
+
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
       </div>
     </header>
@@ -108,34 +120,35 @@
       <section class="hero" id="home">
         <div class="container hero-container">
           <div class="hero-content">
-            <div class="hero-subtitle">AI & Web Developer</div>
+            <div class="hero-subtitle">Software Engineer & Web Developer</div>
             <h1>Fawaz Ahmad</h1>
             <p class="hero-description">
-              IT graduate from Quaid-i-Azam University with hands-on experience
-              in AI, machine learning, and web development. Former Web Engineer at FRPD, 
-              skilled in Python, Java, C++, and HTML/CSS.
+              BSIT graduate from <strong>Quaid-i-Azam University</strong> and <strong>Software Engineer at FRPD</strong> with hands-on experience in web application development, AI systems, and machine learning. Former Software Engineer at <strong>Digital Tent Studio (Australia)</strong> with internships at AITeC and Eve Bytes. Skilled in Python, Java, C++, modern web technologies, and systems administration.
             </p>
             <div class="hero-btns">
               <a href="#projects" class="btn btn-primary">
-                <i class="fas fa-code"></i> View Projects
+                <i class="fas fa-laptop-code"></i> View Projects
               </a>
-              <a href="#contact" class="btn btn-secondary">
+              <a href="Fawaz'sCV.pdf" download="Fawaz_Ahmad_CV.pdf" class="btn btn-secondary">
+                <i class="fas fa-file-pdf"></i> Download CV
+              </a>
+              <a href="#contact" class="btn btn-outline">
                 <i class="fas fa-paper-plane"></i> Contact Me
               </a>
             </div>
             
             <div class="quick-stats">
               <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Projects Completed</div>
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Commercial & AI Projects</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">3</div>
+                <div class="stat-number">4</div>
                 <div class="stat-label">Professional Roles</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">12+</div>
-                <div class="stat-label">Certifications</div>
+                <div class="stat-number">3.3</div>
+                <div class="stat-label">BSIT CGPA (QAU)</div>
               </div>
             </div>
           </div>
@@ -149,7 +162,7 @@
             >
               <img
                 src="Fawaz.jpg"
-                alt="Fawaz Ahmad - Professional Photo"
+                alt="Fawaz Ahmad - Software Engineer"
                 class="profile-photo"
                 id="profilePhoto"
                 loading="eager"
@@ -169,23 +182,13 @@
           <div class="about-content">
             <div class="about-text">
               <p>
-                I’m Fawaz Ahmad, an IT graduate and web developer with a strong
-                interest in building practical, real-world systems. I recently
-                completed my BS in Information Technology from Quaid-i-Azam
-                University, where I worked on projects that combine web
-                development, computer vision, and machine learning.
+                I am a <strong>BSIT graduate from Quaid-i-Azam University</strong> (CGPA 3.3 / 4.0) and currently working as a <strong>Software Engineer at FRPD</strong>, developing and maintaining high-performance web applications and improving system architecture.
               </p>
               <p>
-                I enjoy turning ideas into working products. My experience
-                includes developing role-based web portals, automation tools,
-                and AI-powered applications. One of my major projects was a
-                real-time suspicious activity detection system using Python,
-                OpenCV, and AI APIs.
+                Previously, I worked as a <strong>Software Engineer for Digital Tent Studio (Australia)</strong>, creating responsive user interfaces, optimizing frontend performance, and integrating scalable APIs. I have also completed technical internships in AI at <strong>Eve Bytes</strong> and in Machine Learning & Deep Learning at the <strong>National Center for Physics (AITeC)</strong>, gaining hands-on experience with intelligence modules and data-driven projects.
               </p>
               <p>
-                I have hands-on experience with HTML, CSS, JavaScript, Python,
-                PostgreSQL, and Git. I work as a Web Developer, focusing on 
-                building and maintaining web applications while collaborating with teams.
+                I possess a solid foundation in computer systems, networking fundamentals, and programming in <strong>Python, Java, and C++</strong>, with hands-on project experience in real-time surveillance systems (YOLO/OpenCV) and database-driven web platforms.
               </p>
             </div>
             
@@ -194,24 +197,24 @@
                 <i class="fas fa-graduation-cap"></i>
                 <div>
                   <h4>Education</h4>
-                  <p>BS Information Technology</p>
-                  <p>Quaid-i-Azam University, Islamabad, Pakistan.</p>
+                  <p><strong>BS in Information Technology (BSIT)</strong> · CGPA 3.3 / 4.0</p>
+                  <p>Quaid-i-Azam University, Islamabad, Pakistan</p>
                 </div>
               </div>
               <div class="info-item">
                 <i class="fas fa-briefcase"></i>
                 <div>
-                  <h4>Experience</h4>
-                  <p>Software Engineer</p>
+                  <h4>Current Position</h4>
+                  <p><strong>Software Engineer</strong></p>
                   <p>Firm of Research, Policy and Development (FRPD)</p>
                 </div>
               </div>
               <div class="info-item">
-                <i class="fas fa-certificate"></i>
+                <i class="fas fa-code-branch"></i>
                 <div>
-                  <h4>Specialization</h4>
-                  <p>AI & Machine Learning</p>
-                  <p>Web Development & Design</p>
+                  <h4>Core Domains</h4>
+                  <p>Web Engineering & Frontend Architecture</p>
+                  <p>AI & Machine Learning (Computer Vision / YOLO)</p>
                 </div>
               </div>
             </div>
@@ -223,47 +226,46 @@
       <section id="experience" class="experience">
         <div class="container">
           <div class="section-title">
-            <h2>Experience & Education</h2>
+            <h2>Experience, Education & Achievements</h2>
           </div>
           <div class="experience-tabs">
             <button class="tab-btn active" data-tab="work">Work Experience</button>
             <button class="tab-btn" data-tab="education">Education</button>
-            <button class="tab-btn" data-tab="achievements">Achievements</button>
+            <button class="tab-btn" data-tab="achievements">Key Achievements</button>
           </div>
 
           <!-- Work Experience Timeline -->
           <div class="tab-content active" id="work-content">
             <div class="timeline-item">
-              <span class="timeline-date">Jan 2026 - Present</span>
+              <span class="timeline-date">01/2026 - Present</span>
               <h3>Software Engineer</h3>
-              <h4>FRPD · Remote, Pakistan</h4>
+              <h4>FRPD · Pakistan</h4>
               <p>
-                Developing and maintaining responsive web applications, improving system performance, 
-                handling backend integration, and supporting deployment processes.
+                Developing and maintaining robust web applications, improving system performance, developing the FRPD Research & Policy platform, handling backend integration, and supporting production deployment processes.
               </p>
             </div>
             <div class="timeline-item">
-              <span class="timeline-date">Aug 2023 - Oct 2025</span>
+              <span class="timeline-date">10/2023 - 10/2025</span>
               <h3>Software Engineer</h3>
-              <h4>Digital Tent Studio · Remote, Australia</h4>
+              <h4>Digital Tent Studio · Hybrid, Pakistan (Australia)</h4>
               <p>
-                Developed front-end components and maintained web applications, optimized web page speed, and collaborated on clean API integrations.
+                Designed and developed modern front-end components, maintained responsive web applications (including the National Zakat Foundation Australia website), optimized web page speed, and collaborated on clean API integrations.
               </p>
             </div>
             <div class="timeline-item">
-              <span class="timeline-date">Aug 2024 - Sep 2024</span>
+              <span class="timeline-date">08/2024 - 09/2024</span>
               <h3>Machine Learning & Deep Learning Intern</h3>
               <h4>National Center for Physics (AITeC) · Islamabad, Pakistan</h4>
               <p>
-                Worked on AI-based solutions by designing, training, and evaluating machine learning and deep learning models for data-driven applications.
+                Worked on AI-based solutions by designing, training, and evaluating machine learning and deep learning models for data-driven projects.
               </p>
             </div>
             <div class="timeline-item">
-              <span class="timeline-date">Apr 2024 - May 2024</span>
+              <span class="timeline-date">04/2024 - 05/2024</span>
               <h3>AI Development Intern</h3>
               <h4>Eve Bytes · Remote</h4>
               <p>
-                Assisted in model testing, data processing, and integration of intelligence modules into existing application layers.
+                Assisted in model testing, data processing, pipeline workflows, and integrating intelligence modules into existing application layers.
               </p>
             </div>
           </div>
@@ -271,11 +273,11 @@
           <!-- Education Timeline -->
           <div class="tab-content" id="education-content">
             <div class="timeline-item">
-              <span class="timeline-date">Sep 2021 - Aug 2025</span>
+              <span class="timeline-date">09/2021 – 08/2025</span>
               <h3>Bachelor of Science in Information Technology (BSIT)</h3>
-              <h4>Quaid-i-Azam University · Islamabad, Pakistan</h4>
+              <h4>Quaid-i-Azam University · Islamabad, Pakistan | CGPA 3.3 / 4.0</h4>
               <p>
-                Graduated with CGPA 3.3 / 4.0. Completed academic coursework in software engineering, database design, routing & switching, and server configuration.
+                Graduated with a 3.3 / 4.0 CGPA. Completed academic coursework in Software Engineering, Database Systems, Computer Networks, Cisco Routing & Switching, Server Administration (Hyper-V / VMware / Active Directory), and Machine Learning.
               </p>
             </div>
           </div>
@@ -283,40 +285,40 @@
           <!-- Achievements Timeline -->
           <div class="tab-content" id="achievements-content">
             <div class="timeline-item">
-              <span class="timeline-date">Server Project</span>
-              <h3>Server Administration Lab</h3>
-              <h4>Quaid-i-Azam University</h4>
+              <span class="timeline-date">Project Competition</span>
+              <h3>Certificate of Participation — NUST EME</h3>
+              <h4>National University of Sciences & Technology (NUST EME)</h4>
               <p>
-                Set up a fully functional domain environment using Hyper-V/VMware. Configured Windows Server, Active Directory, DNS, user/group management, GPOs, and client-server verification.
+                Presented an academic software project at a competitive software exhibition hosted by NUST EME, demonstrating technical implementation, systems engineering, and practical applications.
               </p>
             </div>
             <div class="timeline-item">
-              <span class="timeline-date">Networking Project</span>
-              <h3>Networking Essentials Design</h3>
-              <h4>Quaid-i-Azam University</h4>
+              <span class="timeline-date">Organizing & Leadership</span>
+              <h3>Certificate of Appreciation — Open House Organizer</h3>
+              <h4>Institute of Information Technology, Quaid-i-Azam University</h4>
               <p>
-                Designed and implemented a small office network in Cisco Packet Tracer. Configured routers, switches, static IP addressing, and verified connectivity across departments.
+                Actively participated in planning, managing, and organizing the event "Open House for Final Year Students" at the Institute of Information Technology, QAU.
               </p>
             </div>
             <div class="timeline-item">
-              <span class="timeline-date">Engagement</span>
-              <h3>Microsoft Technologies Workshop</h3>
+              <span class="timeline-date">Technical Workshop</span>
+              <h3>International Workshop on Microsoft Technologies</h3>
               <h4>Quaid-i-Azam University</h4>
               <p>
-                Organized and managed the workshop at Quaid-i-Azam University, enhancing technical learning and community engagement.
+                Organized and managed the MicrosoftPak-Finland Capacity Building Initiative (Phase-1) international workshop at Quaid-i-Azam University, fostering technical skill acquisition and community engagement.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Projects Section (Clock Carousel Kept) -->
+      <!-- Projects Section (Clock Carousel) -->
       <section id="projects" class="projects">
         <div class="container">
           <div class="section-title">
             <h2>Featured Projects</h2>
-            <p style="color:var(--gray); font-size: 1.1rem; margin-top: -1.5rem; margin-bottom: 2rem; text-align: center;">
-              Click the circular project nodes on the dial to rotate the needle and explore details.
+            <p style="color:var(--gray); font-size: 1.05rem; margin-top: -1.5rem; margin-bottom: 2rem; text-align: center;">
+              Interactive Project Dial: Click the circular nodes to rotate the pointer and inspect live company portals and AI systems.
             </p>
           </div>
 
@@ -341,26 +343,96 @@
 
             <!-- Hidden Track with projects data template for JS -->
             <div class="projects-track-hidden" id="projectsTrack">
-              <!-- 1 -->
+              <!-- 1. NZF Australia -->
               <div class="proj-card">
-                <div class="proj-type">📷 Python & YOLO · Final Year Project</div>
+                <div class="proj-type">💼 Company Project · Digital Tent Studio</div>
+                <div class="proj-icon">🇦🇺</div>
+                <div class="proj-name">National Zakat Foundation (NZF) Australia</div>
+                <div class="proj-desc">Designed and developed the frontend of the NZF website, creating a responsive and user-friendly interface for Zakat services, donations, Zakat calculation, support applications, impact stories, and organizational information.</div>
+                <div class="proj-tags">
+                  <span class="proj-tag">Frontend</span>
+                  <span class="proj-tag">JavaScript</span>
+                  <span class="proj-tag">Responsive UI</span>
+                  <span class="proj-tag">Live Site</span>
+                </div>
+                <a href="https://nzf.org.au" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <!-- 2. FRPD Platform -->
+              <div class="proj-card">
+                <div class="proj-type">💼 Company Project · FRPD</div>
+                <div class="proj-icon">🏛️</div>
+                <div class="proj-name">FRPD Research & Policy Platform</div>
+                <div class="proj-desc">A professional web platform developed for FRPD to showcase research, policy initiatives, training programs, projects, publications, and organizational information through a structured and responsive interface.</div>
+                <div class="proj-tags">
+                  <span class="proj-tag">Web Platform</span>
+                  <span class="proj-tag">Policy & Research</span>
+                  <span class="proj-tag">Full Stack</span>
+                  <span class="proj-tag">Live Site</span>
+                </div>
+                <a href="https://frpd.pk" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <!-- 3. Al Kyanat -->
+              <div class="proj-card">
+                <div class="proj-type">💼 Company Project · Saudi Arabia</div>
+                <div class="proj-icon">🏢</div>
+                <div class="proj-name">Al Kyanat Corporate Website</div>
+                <div class="proj-desc">A responsive corporate website developed for Al Kyanat to showcase its business activities, company profile, services, and corporate information through a professional online presence.</div>
+                <div class="proj-tags">
+                  <span class="proj-tag">Corporate Portal</span>
+                  <span class="proj-tag">Responsive Web</span>
+                  <span class="proj-tag">UI/UX</span>
+                  <span class="proj-tag">Live Site</span>
+                </div>
+                <a href="https://alkyanat-almushtarika.com" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <!-- 4. City Sahulat -->
+              <div class="proj-card">
+                <div class="proj-type">💼 Company Project</div>
+                <div class="proj-icon">🛠️</div>
+                <div class="proj-name">City Sahulat Services Platform</div>
+                <div class="proj-desc">A web-based home services platform developed for City Sahulat, allowing customers to explore available household services and access service-related information through an easy-to-use interface.</div>
+                <div class="proj-tags">
+                  <span class="proj-tag">Home Services</span>
+                  <span class="proj-tag">Web Platform</span>
+                  <span class="proj-tag">UI Design</span>
+                  <span class="proj-tag">Live Site</span>
+                </div>
+                <a href="https://citysahulat.com" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <!-- 5. The Distinct Dentistry -->
+              <div class="proj-card">
+                <div class="proj-type">💼 Company Project</div>
+                <div class="proj-icon">🦷</div>
+                <div class="proj-name">The Distinct Dentistry Website</div>
+                <div class="proj-desc">A responsive dental clinic website developed to showcase dental services, clinic information, and contact details, providing patients with an accessible platform to explore available treatments and contact the clinic.</div>
+                <div class="proj-tags">
+                  <span class="proj-tag">Healthcare Web</span>
+                  <span class="proj-tag">Responsive</span>
+                  <span class="proj-tag">Clinic Portal</span>
+                  <span class="proj-tag">Live Site</span>
+                </div>
+                <a href="https://thedistinctdentistry.com" target="_blank" rel="noopener noreferrer" class="proj-link">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+              </div>
+              <!-- 6. YOLO Final Year Project -->
+              <div class="proj-card">
+                <div class="proj-type">🎓 Final Year Project · AI & Vision</div>
                 <div class="proj-icon">👁️</div>
-                <div class="proj-name">Suspicious Activity Detection</div>
-                <div class="proj-desc">A Python-based Suspicious Activity Detection System using YOLO pre-trained models to detect harmful behaviors (Guns, Fighting, etc.) in real-time video feeds and uploaded footage. It sends alerts, logs incidents, and supports multiple camera feeds.</div>
+                <div class="proj-name">Real Time Suspicious Activity Detection</div>
+                <div class="proj-desc">A Python-based Suspicious Activity Detection System using YOLO pre-trained models to detect harmful behaviors (Gun, Fighting etc) in real-time video feeds and uploaded footage. It sends alerts, logs incidents, and supports multiple camera feeds.</div>
                 <div class="proj-tags">
                   <span class="proj-tag">Python</span>
                   <span class="proj-tag">YOLO</span>
                   <span class="proj-tag">OpenCV</span>
-                  <span class="proj-tag">Surveillance</span>
+                  <span class="proj-tag">Computer Vision</span>
                 </div>
                 <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
               </div>
-              <!-- 2 -->
+              <!-- 7. University Management System -->
               <div class="proj-card">
                 <div class="proj-type">🏫 Flask & SQL · University Portal</div>
                 <div class="proj-icon">🏫</div>
                 <div class="proj-name">University Management System</div>
-                <div class="proj-desc">A comprehensive Flask-based multi-tenant university portal supporting 5 roles (Student, Teacher, Staff, HOD, Admin) with granular permissions. Manages the academic lifecycle from enrollment to reporting with notifications and approval workflows.</div>
+                <div class="proj-desc">A comprehensive Flask-based multi-tenant university portal supporting 5 roles (Student, Teacher, Staff, HOD, Admin) with granular permissions. Manages the academic lifecycle from enrollment to reporting with notifications.</div>
                 <div class="proj-tags">
                   <span class="proj-tag">Flask</span>
                   <span class="proj-tag">SQL</span>
@@ -369,65 +441,12 @@
                 </div>
                 <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
               </div>
-              <!-- 3 -->
-              <div class="proj-card">
-                <div class="proj-type">🌐 Bootstrap & SQL · Semester Project</div>
-                <div class="proj-icon">🌐</div>
-                <div class="proj-name">IIT Department Web Portal</div>
-                <div class="proj-desc">Developed a comprehensive departmental website for the Institute of Information Technology using HTML, CSS, JavaScript, and Bootstrap. Integrated SQL database backend with XAMPP.</div>
-                <div class="proj-tags">
-                  <span class="proj-tag">Bootstrap</span>
-                  <span class="proj-tag">JS</span>
-                  <span class="proj-tag">SQL</span>
-                  <span class="proj-tag">XAMPP</span>
-                </div>
-                <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
-              </div>
-              <!-- 4 -->
-              <div class="proj-card">
-                <div class="proj-type">📁 JavaFX & SQL · Semester Project</div>
-                <div class="proj-icon">📁</div>
-                <div class="proj-name">File Management System</div>
-                <div class="proj-desc">Developed a desktop application using JavaFX and Scene Builder for the frontend as part of coursework. Integrated backend database using XAMPP/SQL for metadata and indexing.</div>
-                <div class="proj-tags">
-                  <span class="proj-tag">JavaFX</span>
-                  <span class="proj-tag">Scene Builder</span>
-                  <span class="proj-tag">MySQL</span>
-                </div>
-                <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
-              </div>
-              <!-- 5 -->
-              <div class="proj-card">
-                <div class="proj-type">🩺 Python & ML · Semester Project</div>
-                <div class="proj-icon">🩺</div>
-                <div class="proj-name">Disease Prediction App</div>
-                <div class="proj-desc">Machine learning-based application to predict potential illnesses based on user-input symptom lists using trained datasets.</div>
-                <div class="proj-tags">
-                  <span class="proj-tag">Python</span>
-                  <span class="proj-tag">ML</span>
-                  <span class="proj-tag">Scikit-Learn</span>
-                </div>
-                <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
-              </div>
-              <!-- 6 -->
-              <div class="proj-card">
-                <div class="proj-type">🔑 SQL & PHP · Semester Project</div>
-                <div class="proj-icon">🔑</div>
-                <div class="proj-name">English Department DBMS</div>
-                <div class="proj-desc">Created a SQL web-based DBMS to manage staff and student records with login authentication and CRUD functionality.</div>
-                <div class="proj-tags">
-                  <span class="proj-tag">PHP</span>
-                  <span class="proj-tag">SQL</span>
-                  <span class="proj-tag">CRUD</span>
-                </div>
-                <a href="#contact" class="proj-link">Request Demo <i class="fas fa-arrow-right"></i></a>
-              </div>
-              <!-- 7 -->
+              <!-- 8. Gesture Brightness Control -->
               <div class="proj-card">
                 <div class="proj-type">🖐️ MediaPipe & OpenCV · Real-Time Control</div>
                 <div class="proj-icon">🖐️</div>
                 <div class="proj-name">Gesture Brightness Control</div>
-                <div class="proj-desc">Used MediaPipe and OpenCV to create a gesture-controlled system that adjusts screen brightness in real-time based on tracking gestures.</div>
+                <div class="proj-desc">Used MediaPipe and OpenCV to create a gesture-controlled system that adjusts screen brightness in real-time based on hand gesture tracking.</div>
                 <div class="proj-tags">
                   <span class="proj-tag">MediaPipe</span>
                   <span class="proj-tag">OpenCV</span>
@@ -455,37 +474,70 @@
       <section id="skills" class="skills">
         <div class="container">
           <div class="section-title">
-            <h2>Skills</h2>
+            <h2>Skills & Competencies</h2>
           </div>
           <div class="skills-container">
+            <!-- 1. Technical & Software Development -->
             <div class="skill-category">
-              <h3>Technical Skills</h3>
+              <h3><i class="fas fa-code" style="color:var(--primary); margin-right:8px;"></i> Software & Web Development</h3>
               <div class="skill-list">
+                <div class="skill-item">Software Development</div>
                 <div class="skill-item">Python</div>
                 <div class="skill-item">C++</div>
-                <div class="skill-item">HTML/CSS</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Machine Learning</div>
-                <div class="skill-item">TensorFlow</div>
-                <div class="skill-item">OpenCV</div>
-                <div class="skill-item">Git & GitHub</div>
-                <div class="skill-item">Scikit-learn</div>
-                <div class="skill-item">SQL & SQLite</div>
                 <div class="skill-item">Java</div>
-                <div class="skill-item">Systems Administration</div>
-                <div class="skill-item">Virtualization</div>
-                <div class="skill-item">Cisco Routing</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">HTML5 / CSS3</div>
+                <div class="skill-item">SQL & Databases</div>
+                <div class="skill-item">REST APIs</div>
+                <div class="skill-item">Git & GitHub</div>
               </div>
             </div>
+
+            <!-- 2. AI, Machine Learning & Vision -->
             <div class="skill-category">
-              <h3>Soft Skills</h3>
+              <h3><i class="fas fa-brain" style="color:var(--primary); margin-right:8px;"></i> AI, ML & Computer Vision</h3>
               <div class="skill-list">
-                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Machine Learning</div>
+                <div class="skill-item">Deep Learning</div>
+                <div class="skill-item">YOLO Object Detection</div>
+                <div class="skill-item">OpenCV</div>
+                <div class="skill-item">TensorFlow</div>
+                <div class="skill-item">Scikit-learn</div>
+                <div class="skill-item">MediaPipe</div>
+                <div class="skill-item">Real-Time Surveillance</div>
+              </div>
+            </div>
+
+            <!-- 3. Systems, Networking & Virtualization -->
+            <div class="skill-category">
+              <h3><i class="fas fa-network-wired" style="color:var(--primary); margin-right:8px;"></i> Systems & Networking</h3>
+              <div class="skill-list">
+                <div class="skill-item">Computer Systems</div>
+                <div class="skill-item">Networking Fundamentals</div>
+                <div class="skill-item">CISCO CCNA Concepts</div>
+                <div class="skill-item">CISCO Packet Tracer</div>
+                <div class="skill-item">VMware Workstation</div>
+                <div class="skill-item">Virtualization & Hyper-V</div>
+                <div class="skill-item">Windows Server / AD</div>
+              </div>
+            </div>
+
+            <!-- 4. Soft Skills & Languages -->
+            <div class="skill-category">
+              <h3><i class="fas fa-users" style="color:var(--primary); margin-right:8px;"></i> Professional Skills & Languages</h3>
+              <div class="skill-list">
                 <div class="skill-item">Leadership</div>
                 <div class="skill-item">Communication</div>
+                <div class="skill-item">Management</div>
+                <div class="skill-item">Problem Solving</div>
                 <div class="skill-item">Project Management</div>
                 <div class="skill-item">Team Collaboration</div>
-                <div class="skill-item">Management</div>
+                <div class="skill-item" style="border-color: var(--primary); background: var(--primary-light); color: var(--primary-dark);">
+                  <i class="fas fa-language"></i> Urdu (Native)
+                </div>
+                <div class="skill-item" style="border-color: var(--accent); background: rgba(16, 185, 129, 0.1); color: var(--accent);">
+                  <i class="fas fa-globe"></i> English (IELTS)
+                </div>
               </div>
             </div>
           </div>
@@ -500,13 +552,145 @@
           </div>
 
           <div class="experience-tabs">
-            <button class="tab-btn active" data-tab="online-courses">Online Courses</button>
-            <button class="tab-btn" data-tab="workshops">Workshops & Technical</button>
+            <button class="tab-btn active" data-tab="technical-certs">Technical & Networking Certifications</button>
+            <button class="tab-btn" data-tab="workshops-courses">Workshops & Web Courses</button>
           </div>
 
-          <!-- Online Courses Content -->
-          <div class="tab-content active" id="online-courses-content">
+          <!-- Technical & Networking Certifications Tab -->
+          <div class="tab-content active" id="technical-certs-content">
             <div class="certifications-grid">
+              <!-- CCNA -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                  <div>
+                    <h3>CCNA: Introduction to Networks</h3>
+                    <span class="cert-date">May 2025</span>
+                  </div>
+                </div>
+                <p>Networking architectures, IP subnet schemes, routing/switching configurations, and TCP/IP protocol stack.</p>
+                <div class="cert-provider">CISCO</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Computer Networking -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-server"></i></div>
+                  <div>
+                    <h3>Computer Networking</h3>
+                    <span class="cert-date">May 2025</span>
+                  </div>
+                </div>
+                <p>Fundamentals of data transmission, client-server models, OSI layers, topology design, and network infrastructure.</p>
+                <div class="cert-provider">Ezxprt</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Cisco Packet Tracer -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
+                  <div>
+                    <h3>CISCO Packet Tracer</h3>
+                    <span class="cert-date">May 2025</span>
+                  </div>
+                </div>
+                <p>Designing, simulating, and validating complex enterprise network topologies using simulation packets.</p>
+                <div class="cert-provider">Ezxprt</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- VMware Workstation -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-desktop"></i></div>
+                  <div>
+                    <h3>VMware Workstation</h3>
+                    <span class="cert-date">May 2025</span>
+                  </div>
+                </div>
+                <p>Deploying guest OS server nodes, snapshotting, and virtual adapters in Hyper-V and VMware workstation setups.</p>
+                <div class="cert-provider">Ezxprt</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- IBM Cybersecurity Tools -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                  <div>
+                    <h3>Introduction to Cybersecurity Tools & Cyber Attacks</h3>
+                    <span class="cert-date">Mar 2023</span>
+                  </div>
+                </div>
+                <p>Comprehensive overview of key cybersecurity tools, attack vectors, encryption methods, and threat mitigation.</p>
+                <div class="cert-provider">Credly by Pearson, IBM</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Ethical Hacking Essentials -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fas fa-user-secret"></i></div>
+                  <div>
+                    <h3>Ethical Hacking Essentials (EHE)</h3>
+                    <span class="cert-date">Mar 2023</span>
+                  </div>
+                </div>
+                <p>Fundamental concepts of information security, ethical hacking practices, and vulnerability scanning mechanisms.</p>
+                <div class="cert-provider">EC-Council</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workshops & Online Courses Tab -->
+          <div class="tab-content" id="workshops-courses-content">
+            <div class="certifications-grid">
+              <!-- Microsoft Workshop -->
+              <div class="certification-card">
+                <div class="cert-header">
+                  <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                  <div>
+                    <h3>International Workshop on Microsoft Technologies</h3>
+                    <span class="cert-date">Jan 2025</span>
+                  </div>
+                </div>
+                <p>MicrosoftPak-Finland Capacity Building Initiative (Phase-1) held at Quaid-i-Azam University, Islamabad.</p>
+                <div class="cert-provider">Microsoft & QAU</div>
+                <div class="certificate-link" style="margin-top: 15px;">
+                  <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
+                    View Details <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Advanced JavaScript -->
               <div class="certification-card">
                 <div class="cert-header">
                   <div class="cert-icon"><i class="fab fa-js-square"></i></div>
@@ -515,7 +699,7 @@
                     <span class="cert-date">Aug 2025</span>
                   </div>
                 </div>
-                <p>Advanced concepts in JavaScript programming and modern asynchronous web development techniques.</p>
+                <p>Advanced asynchronous programming, functional patterns, and modern ES6+ web development techniques.</p>
                 <div class="cert-provider">Scrimba</div>
                 <div class="certificate-link" style="margin-top: 15px;">
                   <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
@@ -523,15 +707,17 @@
                   </a>
                 </div>
               </div>
+
+              <!-- Intro to AI Concepts -->
               <div class="certification-card">
                 <div class="cert-header">
-                  <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+                  <div class="cert-icon"><i class="fas fa-robot"></i></div>
                   <div>
                     <h3>Introduction to AI Concepts</h3>
                     <span class="cert-date">Jul 2025</span>
                   </div>
                 </div>
-                <p>Fundamental concepts of artificial intelligence, deep learning, and machine learning principles.</p>
+                <p>Fundamental concepts of artificial intelligence, deep learning architectures, and machine learning principles.</p>
                 <div class="cert-provider">Microsoft</div>
                 <div class="certificate-link" style="margin-top: 15px;">
                   <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
@@ -539,15 +725,17 @@
                   </a>
                 </div>
               </div>
+
+              <!-- Tailwind CSS -->
               <div class="certification-card">
                 <div class="cert-header">
-                  <div class="cert-icon"><i class="fas fa-server"></i></div>
+                  <div class="cert-icon"><i class="fas fa-palette"></i></div>
                   <div>
                     <h3>Tailwind CSS Course</h3>
                     <span class="cert-date">Feb 2025</span>
                   </div>
                 </div>
-                <p>Mastering utility-first layouts, responsive structures, and modern styled UI grids with Tailwind CSS.</p>
+                <p>Mastering utility-first layouts, responsive design structures, and modern styled UI grids with Tailwind CSS.</p>
                 <div class="cert-provider">Scrimba</div>
                 <div class="certificate-link" style="margin-top: 15px;">
                   <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
@@ -555,6 +743,8 @@
                   </a>
                 </div>
               </div>
+
+              <!-- Manage Repo Changes via PR -->
               <div class="certification-card">
                 <div class="cert-header">
                   <div class="cert-icon"><i class="fab fa-github"></i></div>
@@ -567,60 +757,6 @@
                 <div class="cert-provider">Microsoft</div>
                 <div class="certificate-link" style="margin-top: 15px;">
                   <a href="https://drive.google.com/drive/folders/1HNJyuGa7X8BGhvyGqB62KSmaf2tzu-ez?usp=drive_link" target="_blank" rel="noopener">
-                    View Certificate <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Workshops Content -->
-          <div class="tab-content" id="workshops-content">
-            <div class="certifications-grid">
-              <div class="certification-card">
-                <div class="cert-header">
-                  <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
-                  <div>
-                    <h3>CCNA: Intro to Networks</h3>
-                    <span class="cert-date">May 2025</span>
-                  </div>
-                </div>
-                <p>Networking architectures, IP subnet schemes, routing/switching configurations, and TCP/IP protocol stack.</p>
-                <div class="cert-provider">Cisco</div>
-                <div class="certificate-link" style="margin-top: 15px;">
-                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
-                    View Certificate <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="certification-card">
-                <div class="cert-header">
-                  <div class="cert-icon"><i class="fas fa-project-diagram"></i></div>
-                  <div>
-                    <h3>Cisco Packet Tracer Setup</h3>
-                    <span class="cert-date">May 2025</span>
-                  </div>
-                </div>
-                <p>Designing, simulating, and validating complex local network topologies using simulation packets.</p>
-                <div class="cert-provider">Ezxprt</div>
-                <div class="certificate-link" style="margin-top: 15px;">
-                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
-                    View Certificate <i class="fas fa-external-link-alt"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="certification-card">
-                <div class="cert-header">
-                  <div class="cert-icon"><i class="fas fa-desktop"></i></div>
-                  <div>
-                    <h3>VMware Workstation Basics</h3>
-                    <span class="cert-date">May 2025</span>
-                  </div>
-                </div>
-                <p>Deploying guest OS server nodes, snapshotting, and virtual adapters in Hyper-V and VMware setups.</p>
-                <div class="cert-provider">Ezxprt</div>
-                <div class="certificate-link" style="margin-top: 15px;">
-                  <a href="https://drive.google.com/drive/folders/1onVU3PnOjUgRbx2ORAL0BiPyVLSFprOl?usp=drive_link" target="_blank" rel="noopener">
                     View Certificate <i class="fas fa-external-link-alt"></i>
                   </a>
                 </div>
@@ -653,7 +789,16 @@
                 </div>
                 <div>
                   <h4>Phone</h4>
-                  <p><a href="tel:+923110540839">+92 311 0540839</a></p>
+                  <p><a href="tel:+923110540839">+92-311-0540839</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p><a href="https://www.linkedin.com/in/fawaz-ahmad7/" target="_blank" rel="noopener noreferrer">linkedin.com/in/fawaz-ahmad7</a></p>
                 </div>
               </div>
               <div class="contact-item">
@@ -662,7 +807,7 @@
                 </div>
                 <div>
                   <h4>Location</h4>
-                  <p>Satellite Town, Rawalpindi, Pakistan</p>
+                  <p>Rawalpindi, Pakistan</p>
                 </div>
               </div>
             </div>
@@ -679,7 +824,7 @@
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required />
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
@@ -687,7 +832,7 @@
                     id="message"
                     name="message"
                     rows="5"
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about your project or opportunity..."
                     required
                   ></textarea>
                 </div>
@@ -706,8 +851,8 @@
       <div class="container footer-container">
         <a href="#" class="footer-logo" aria-label="Fawaz Ahmad Portfolio">Fawaz<span>Ahmad</span></a>
         <p class="footer-tagline">
-          IT graduate specializing in AI, machine learning, and web development.
-          Available for freelance projects and full-time opportunities.
+          Software Engineer & Web Developer with expertise in web platforms, AI systems, and machine learning.
+          Available for engineering opportunities and client projects.
         </p>
 
         <div class="social-links">
@@ -726,6 +871,13 @@
             aria-label="Send email"
           >
             <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="tel:+923110540839"
+            class="social-link"
+            aria-label="Call phone"
+          >
+            <i class="fas fa-phone"></i>
           </a>
           <a
             href="https://www.fiverr.com/fawaz03/buying?source=avatar_menu_profile"
@@ -758,7 +910,7 @@
         </ul>
 
         <div class="copyright">
-          <p>&copy; 2026 Fawaz Ahmad. All Rights Reserved.</p>
+          <p>&copy; 2026 Fawaz Ahmad. All Rights Reserved. · <a href="https://fawaz-portfolio-site.netlify.app/" style="color:var(--primary); text-decoration:none;" target="_blank">fawaz-portfolio-site.netlify.app</a></p>
         </div>
       </div>
     </footer>
